@@ -43,12 +43,14 @@ export const Hero = () => {
               <Sparkles className="w-5 h-5 lg:w-6 lg:h-6 animate-bounce-gentle" />
             </div>
             
-            {/* Main title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                DuDu Animal Party
-              </span>
-            </h1>
+            {/* Main title - Logo */}
+            <div className="flex justify-center lg:justify-start">
+              <img 
+                src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
+                alt="DuDu Animal Party Logo" 
+                className="h-16 sm:h-20 lg:h-24 xl:h-28 w-auto"
+              />
+            </div>
             
             {/* Description */}
             <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
