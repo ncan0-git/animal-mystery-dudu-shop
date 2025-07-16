@@ -30,10 +30,6 @@ export const Hero = () => {
                 alt="DuDu Animal Party Mystery Box" 
                 className="w-full h-auto rounded-lg shadow-soft object-contain"
               />
-              <div className="absolute -top-2 -right-2 w-10 h-10 lg:w-12 lg:h-12 bg-orange-fox rounded-full flex items-center justify-center shadow-card animate-bounce-gentle">
-                <Sparkles className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
-              </div>
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 lg:w-8 lg:h-8 bg-green-frog rounded-full animate-wiggle"></div>
             </div>
           </div>
 
