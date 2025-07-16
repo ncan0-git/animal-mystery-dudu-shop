@@ -44,11 +44,13 @@ export const Hero = () => {
             </div>
             
             {/* Main title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                DuDu Animal Party
-              </span>
-            </h1>
+            <div className="flex justify-center lg:justify-start">
+              <img 
+                src="/lovable-uploads/a4128f24-7690-4b87-9a2a-9805392b792f.png" 
+                alt="DuDu Animal Party Logo" 
+                className="h-16 sm:h-20 lg:h-24 xl:h-28 w-auto object-contain"
+              />
+            </div>
             
             {/* Description */}
             <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
