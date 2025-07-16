@@ -36,26 +36,19 @@ export const Hero = () => {
           {/* Text content - shows second on mobile */}
           <div className="text-center lg:text-left space-y-6 lg:space-y-8 order-2 lg:order-1">
             
-            {/* Badge */}
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-primary-green-dark">
-              <Sparkles className="w-5 h-5 lg:w-6 lg:h-6 animate-bounce-gentle" />
-              <span className="text-base lg:text-lg font-semibold">Mystery Awaits!</span>
-              <Sparkles className="w-5 h-5 lg:w-6 lg:h-6 animate-bounce-gentle" />
-            </div>
-            
             {/* Main title - Logo */}
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center">
               <img 
                 src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
                 alt="DuDu Animal Party Logo" 
-                className="h-16 sm:h-20 lg:h-24 xl:h-28 w-auto"
+                className="h-20 sm:h-24 lg:h-32 xl:h-36 w-auto"
               />
             </div>
             
             {/* Description */}
-            <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
               Discover the magic of surprise with our adorable mystery box! 
-              Each box contains one of seven cute DuDu Animal dolls waiting to become your new friend.
+              Each box contains one of eight cute DuDu Animal dolls waiting to become your new friend.
             </p>
 
             {/* Action buttons */}
