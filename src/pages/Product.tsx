@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Star, Heart, Shield, Truck, Gift, ArrowLeft } from "lucide-react";
+import { Star, Heart, Shield, Truck, Gift, ArrowLeft, ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Product = () => {
   const navigate = useNavigate();
+  const { toast } = useToast();
   const [quantity, setQuantity] = useState(1);
   const price = 20;
 
@@ -20,8 +22,43 @@ const Product = () => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   const handlePurchase = () => {
-    // This will be connected to payment processing later
-    console.log(`Purchasing ${quantity} DuDu Animal Party box(es) for $${price * quantity}`);
+    // Save cart items to localStorage
+    const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const newItem = {
+      id: 'dudu-mystery-box',
+      name: 'DuDu Animal Party Mystery Box',
+      price: price,
+      quantity: quantity,
+      image: productImages[0]
+    };
+    
+    // Check if item already exists in cart
+    const existingItemIndex = existingCart.findIndex((item: any) => item.id === newItem.id);
+    
+    if (existingItemIndex > -1) {
+      // Update quantity if item exists
+      existingCart[existingItemIndex].quantity += quantity;
+    } else {
+      // Add new item to cart
+      existingCart.push(newItem);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(existingCart));
+    
+    // Show success toast
+    toast({
+      title: "Added to Cart! 🎉",
+      description: `${quantity} DuDu Mystery Box${quantity > 1 ? 'es' : ''} added to your cart`,
+    });
+  };
+
+  const handleBuyNow = () => {
+    handlePurchase();
+    // For now, just redirect to the same page or could redirect to a checkout page
+    toast({
+      title: "Redirecting to Checkout...",
+      description: "Taking you to secure payment",
+    });
   };
 
   return (
@@ -157,7 +194,7 @@ const Product = () => {
                 className="w-full bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold py-6 text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
                 onClick={handlePurchase}
               >
-                <Gift className="w-5 h-5 mr-2" />
+                <ShoppingCart className="w-5 h-5 mr-2" />
                 Add to Cart - ${price * quantity}
               </Button>
               
@@ -165,7 +202,9 @@ const Product = () => {
                 variant="outline" 
                 size="lg"
                 className="w-full border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat py-6 text-lg transition-all duration-300"
+                onClick={handleBuyNow}
               >
+                <Gift className="w-5 h-5 mr-2" />
                 Buy Now
               </Button>
             </div>
