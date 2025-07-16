@@ -20,7 +20,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen bg-gradient-hero">
       {/* Header with Logo */}
-      <div className="w-full border-b-4 border-primary-green">
+      <div className="w-full border-b-4 border-primary-green bg-primary-green">
         <div className="container mx-auto px-4 pt-8 pb-4">
           <div className="flex justify-center">
             <img 
