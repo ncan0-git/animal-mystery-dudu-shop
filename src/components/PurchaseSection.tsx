@@ -27,9 +27,8 @@ const features = [
 ];
 
 export const PurchaseSection = () => {
-  const handlePurchase = () => {
-    // TODO: Integrate with payment system
-    alert("Thank you for your interest! Payment integration will be added soon. Please contact us directly to place your order.");
+  const goToProduct = () => {
+    window.location.href = '/product';
   };
 
   return (
@@ -131,12 +130,12 @@ export const PurchaseSection = () => {
 
               <Button 
                 size="lg" 
-                className="w-full bg-gradient-primary hover:opacity-90 text-white font-bold py-6 text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105 group"
-                onClick={handlePurchase}
+                className="w-full bg-gradient-primary hover:opacity-90 text-white font-bold py-6 text-base lg:text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105 group px-4"
+                onClick={goToProduct}
               >
-                <Gift className="w-6 h-6 mr-3 group-hover:animate-bounce-gentle" />
-                Order Your Mystery Box Now
-                <Sparkles className="w-5 h-5 ml-3 group-hover:animate-wiggle" />
+                <Gift className="w-5 h-5 lg:w-6 lg:h-6 mr-2 lg:mr-3 group-hover:animate-bounce-gentle" />
+                <span className="flex-1">Order Your Mystery Box Now</span>
+                <Sparkles className="w-4 h-4 lg:w-5 lg:h-5 ml-2 lg:ml-3 group-hover:animate-wiggle" />
               </Button>
 
               <p className="text-xs text-center text-foreground/60">
