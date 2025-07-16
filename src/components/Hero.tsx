@@ -14,10 +14,10 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen bg-gradient-hero flex items-center justify-center px-4 py-20">
-      <div className="container mx-auto max-w-6xl w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
-          <div className="text-center lg:text-left space-y-8">
+          <div className="text-center lg:text-left space-y-8 w-full">
             <div className="space-y-4">
               <div className="flex items-center justify-center lg:justify-start gap-2 text-primary-green-dark">
                 <Sparkles className="w-6 h-6 animate-bounce-gentle" />
@@ -75,7 +75,7 @@ export const Hero = () => {
           </div>
 
           {/* Right side - Mystery box image */}
-          <div className="flex justify-center lg:justify-center lg:pr-8">
+          <div className="flex justify-center w-full">
             <div className="relative">
               <img 
                 src={mysteryBoxImage} 
