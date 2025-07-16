@@ -74,13 +74,6 @@ export const AnimalGrid = () => {
     <section id="animals" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Star className="w-6 h-6 text-orange-fox animate-wiggle" />
-            <Badge variant="secondary" className="text-lg px-4 py-2 bg-gradient-primary text-white">
-              Meet Your Potential Friends
-            </Badge>
-            <Star className="w-6 h-6 text-orange-fox animate-wiggle" />
-          </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
