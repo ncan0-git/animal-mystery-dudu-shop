@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Gift, Sparkles, Star } from "lucide-react";
+import { Gift, Sparkles, Star, ShoppingCart } from "lucide-react";
 import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422a9.png";
 
 export const Hero = () => {
@@ -22,12 +22,20 @@ export const Hero = () => {
       {/* Header with Logo */}
       <div className="w-full">
         <div className="container mx-auto px-4 pt-8 pb-4">
-          <div className="flex justify-start">
+          <div className="flex justify-between items-center">
             <img 
               src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
               alt="DuDu Animal Party Logo" 
               className="h-12 sm:h-16 lg:h-20 xl:h-24 w-auto"
             />
+            <Button 
+              variant="outline"
+              onClick={scrollToPurchase}
+              className="border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat"
+            >
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              Checkout
+            </Button>
           </div>
         </div>
       </div>
