@@ -20,7 +20,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen bg-gradient-hero">
       {/* Header with Logo */}
-      <div className="container mx-auto px-4 pt-8 pb-2">
+      <div className="container mx-auto px-4 pt-8">
         <div className="flex justify-center">
           <img 
             src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
@@ -30,7 +30,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-4 lg:py-8">
+      <div className="container mx-auto px-4 py-2 lg:py-4">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
           
           {/* Mystery box image - shows first on mobile */}
