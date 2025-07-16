@@ -24,7 +24,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen bg-gradient-hero">
       {/* Header with Logo */}
-      <div className="w-full bg-primary-green">
+      <div className="w-full border-b border-foreground/20">
         <div className="container mx-auto px-4 pt-8 pb-4">
           <div className="flex justify-between items-center">
             <img 
@@ -35,13 +35,13 @@ export const Hero = () => {
             <nav className="flex gap-6">
               <button 
                 onClick={scrollToProducts}
-                className="text-white/90 hover:text-white transition-colors cursor-pointer font-medium"
+                className="text-foreground/80 hover:text-primary-green-dark transition-colors cursor-pointer font-medium"
               >
                 Products
               </button>
               <button 
                 onClick={scrollToContact}
-                className="text-white/90 hover:text-white transition-colors cursor-pointer font-medium"
+                className="text-foreground/80 hover:text-primary-green-dark transition-colors cursor-pointer font-medium"
               >
                 Contact Us
               </button>
