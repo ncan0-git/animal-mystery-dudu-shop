@@ -35,14 +35,6 @@ export const PurchaseSection = () => {
     <section id="purchase" className="pt-12 pb-20 px-4 bg-gradient-hero">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-6 h-6 text-primary-green-dark animate-bounce-gentle" />
-            <Badge variant="secondary" className="text-lg px-4 py-2 bg-gradient-primary text-white">
-              Ready for Your Surprise?
-            </Badge>
-            <Sparkles className="w-6 h-6 text-primary-green-dark animate-bounce-gentle" />
-          </div>
-          
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Get Your DuDu Animal Party Box
