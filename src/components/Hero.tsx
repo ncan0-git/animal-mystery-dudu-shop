@@ -60,7 +60,7 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
+                className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
                 onClick={scrollToPurchase}
               >
                 <Gift className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
