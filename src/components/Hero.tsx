@@ -19,8 +19,19 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen bg-gradient-hero">
-      <div className="container mx-auto px-4 py-12 lg:py-20">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
+      {/* Header with Logo */}
+      <div className="container mx-auto px-4 pt-8 pb-4">
+        <div className="flex justify-center">
+          <img 
+            src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
+            alt="DuDu Animal Party Logo" 
+            className="h-20 sm:h-24 lg:h-32 xl:h-36 w-auto"
+          />
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-8 lg:py-16">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
           
           {/* Mystery box image - shows first on mobile */}
           <div className="flex justify-center order-1 lg:order-2">
@@ -35,15 +46,6 @@ export const Hero = () => {
 
           {/* Text content - shows second on mobile */}
           <div className="text-center lg:text-left space-y-6 lg:space-y-8 order-2 lg:order-1">
-            
-            {/* Main title - Logo */}
-            <div className="flex justify-center">
-              <img 
-                src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
-                alt="DuDu Animal Party Logo" 
-                className="h-20 sm:h-24 lg:h-32 xl:h-36 w-auto"
-              />
-            </div>
             
             {/* Description */}
             <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
