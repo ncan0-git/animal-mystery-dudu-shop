@@ -20,13 +20,15 @@ export const Hero = () => {
   return (
     <section className="min-h-screen bg-gradient-hero">
       {/* Header with Logo */}
-      <div className="container mx-auto px-4 pt-8 pb-4">
-        <div className="flex justify-center">
-          <img 
-            src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
-            alt="DuDu Animal Party Logo" 
-            className="h-20 sm:h-24 lg:h-32 xl:h-36 w-auto"
-          />
+      <div className="w-full border-b-4 border-primary-green">
+        <div className="container mx-auto px-4 pt-8 pb-4">
+          <div className="flex justify-center">
+            <img 
+              src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
+              alt="DuDu Animal Party Logo" 
+              className="h-16 sm:h-20 lg:h-24 xl:h-28 w-auto"
+            />
+          </div>
         </div>
       </div>
 
