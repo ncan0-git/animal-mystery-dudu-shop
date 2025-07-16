@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MessageCircle, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MessageCircle, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -170,7 +170,7 @@ export const Contact = () => {
                         Call us during business hours
                       </p>
                       <p className="text-primary-green font-medium">
-                        +1 (555) 123-DUDU
+                        +1 (609) 405-7249
                       </p>
                       <p className="text-sm text-foreground/60 mt-1">
                         Mon-Fri: 9AM-6PM EST
@@ -180,27 +180,6 @@ export const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Address */}
-              <Card className="group bg-gradient-card shadow-card hover:shadow-hover transition-all duration-300 border-orange-fox/20 hover:border-orange-fox/40">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-orange-fox rounded-full group-hover:scale-110 transition-transform duration-300">
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">Visit Our Store</h4>
-                      <p className="text-foreground/70 mb-2">
-                        Come see our collection in person
-                      </p>
-                      <p className="text-primary-green font-medium">
-                        123 Kawaii Street<br />
-                        Cute Town, CT 12345<br />
-                        United States
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
 
             {/* FAQ Note */}
