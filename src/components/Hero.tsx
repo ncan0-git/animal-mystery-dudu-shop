@@ -14,8 +14,8 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen bg-gradient-hero flex items-center justify-center px-4 py-20">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto max-w-6xl w-full">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
@@ -58,7 +58,7 @@ export const Hero = () => {
               </Button>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-start gap-8 text-sm text-foreground/60">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 lg:gap-8 text-sm text-foreground/60">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-frog rounded-full"></div>
                 <span>Free Shipping Included</span>
