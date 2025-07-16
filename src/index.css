@@ -2,14 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* DuDu Animal Party Design System - Playful and colorful theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 320 30% 97%;
     --foreground: 222.2 84% 4.9%;
+
+    /* Animal-inspired color palette */
+    --pink-bunny: 330 80% 85%;
+    --pink-bunny-dark: 330 60% 70%;
+    --white-panda: 0 0% 95%;
+    --white-panda-dark: 0 0% 85%;
+    --green-frog: 120 60% 75%;
+    --green-frog-dark: 120 50% 60%;
+    --blue-elephant: 210 70% 80%;
+    --blue-elephant-dark: 210 60% 65%;
+    --orange-fox: 25 85% 75%;
+    --orange-fox-dark: 25 75% 60%;
+    --black-cat: 240 8% 25%;
+    --black-cat-light: 240 8% 40%;
+    --brown-bear: 30 40% 65%;
+    --brown-bear-dark: 30 50% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--pink-bunny)), hsl(var(--blue-elephant)));
+    --gradient-hero: linear-gradient(180deg, hsl(320 40% 98%), hsl(320 30% 95%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(0 0% 98% / 0.6));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(320 30% 85% / 0.3);
+    --shadow-card: 0 8px 30px hsl(320 40% 80% / 0.2);
+    --shadow-hover: 0 12px 40px hsl(320 50% 75% / 0.3);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
