@@ -62,11 +62,12 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="flex flex-col items-center">
           
-          {/* Contact Form */}
-          <Card className="bg-gradient-card shadow-card border-none">
-            <CardContent className="p-8">
+          {/* Contact Form - Full width on mobile, max-width on desktop */}
+          <div className="w-full max-w-2xl mb-12">
+            <Card className="bg-gradient-card shadow-card border-none">
+              <CardContent className="p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 bg-gradient-primary rounded-full">
                   <MessageCircle className="w-5 h-5 text-white" />
@@ -129,14 +130,15 @@ export const Contact = () => {
                   Send Message
                 </Button>
               </form>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
 
-          {/* Contact Information */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold mb-8">Other Ways to Reach Us</h3>
+          {/* Contact Information - Centered on mobile */}
+          <div className="w-full max-w-2xl">
+            <h3 className="text-2xl font-semibold mb-8 text-center lg:text-left">Other Ways to Reach Us</h3>
             
-            <div className="space-y-6">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               {/* Email */}
               <Card className="group bg-gradient-card shadow-card hover:shadow-hover transition-all duration-300 border-green-frog/20 hover:border-green-frog/40">
                 <CardContent className="p-6">
@@ -182,8 +184,9 @@ export const Contact = () => {
 
             </div>
 
-            {/* FAQ Note */}
-            <Card className="bg-gradient-primary/10 border-primary-green/30">
+            {/* FAQ Note - Centered */}
+            <div className="flex justify-center">
+              <Card className="bg-gradient-primary/10 border-primary-green/30 w-full max-w-md">
               <CardContent className="p-6 text-center">
                 <h4 className="font-semibold text-foreground mb-2">Quick Questions?</h4>
                 <p className="text-sm text-foreground/70">
@@ -191,7 +194,8 @@ export const Contact = () => {
                   returns, and our mystery box contents!
                 </p>
               </CardContent>
-            </Card>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
