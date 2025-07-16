@@ -21,6 +21,10 @@ export const Hero = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const goToProduct = () => {
+    window.location.href = '/product';
+  };
+
   return (
     <section className="min-h-screen bg-gradient-hero">
       {/* Header with Logo */}
@@ -78,7 +82,7 @@ export const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
-                onClick={scrollToPurchase}
+                onClick={goToProduct}
               >
                 <Gift className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
                 Get Your Mystery Box - $20
