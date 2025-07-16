@@ -2,20 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Star } from "lucide-react";
 
-// Import animal images
-import pinkBunnyImg from "@/assets/animals/pink-bunny.png";
-import whitePandaImg from "@/assets/animals/white-panda.png";
-import greenFrogImg from "@/assets/animals/green-frog.png";
-import blueElephantImg from "@/assets/animals/blue-elephant.png";
-import orangeFoxImg from "@/assets/animals/orange-fox.png";
-import blackCatImg from "@/assets/animals/black-cat.png";
-import brownBearImg from "@/assets/animals/brown-bear.png";
-import mysteryFriendImg from "@/assets/animals/mystery-friend.png";
-
 const animals = [
   {
     name: "Pink Bunny",
-    image: pinkBunnyImg,
+    emoji: "🐰",
     color: "bg-pink-bunny",
     borderColor: "border-pink-bunny-dark",
     description: "Soft and cuddly with the sweetest smile",
@@ -23,7 +13,7 @@ const animals = [
   },
   {
     name: "White Panda",
-    image: whitePandaImg,
+    emoji: "🐼",
     color: "bg-white-panda",
     borderColor: "border-white-panda-dark",
     description: "Wise and peaceful bamboo lover",
@@ -31,7 +21,7 @@ const animals = [
   },
   {
     name: "Green Frog",
-    image: greenFrogImg,
+    emoji: "🐸",
     color: "bg-green-frog",
     borderColor: "border-green-frog-dark",
     description: "Energetic hopper with a big heart",
@@ -39,7 +29,7 @@ const animals = [
   },
   {
     name: "Blue Elephant",
-    image: blueElephantImg,
+    emoji: "🐘",
     color: "bg-blue-elephant",
     borderColor: "border-blue-elephant-dark",
     description: "Never forgets a friend or a hug",
@@ -47,7 +37,7 @@ const animals = [
   },
   {
     name: "Orange Fox",
-    image: orangeFoxImg,
+    emoji: "🦊",
     color: "bg-orange-fox",
     borderColor: "border-orange-fox-dark",
     description: "Clever and quick with endless curiosity",
@@ -55,7 +45,7 @@ const animals = [
   },
   {
     name: "Black Cat",
-    image: blackCatImg,
+    emoji: "🐱",
     color: "bg-black-cat",
     borderColor: "border-black-cat-light",
     description: "Mysterious and elegant night wanderer",
@@ -63,7 +53,7 @@ const animals = [
   },
   {
     name: "Brown Bear",
-    image: brownBearImg,
+    emoji: "🐻",
     color: "bg-brown-bear",
     borderColor: "border-brown-bear-dark",
     description: "Big hugs and even bigger heart",
@@ -71,7 +61,7 @@ const animals = [
   },
   {
     name: "Mystery Friend",
-    image: mysteryFriendImg,
+    emoji: "❓",
     color: "bg-gradient-to-br from-purple-400 to-pink-400",
     borderColor: "border-purple-400",
     description: "Who knows what surprise awaits you?",
@@ -105,13 +95,11 @@ export const AnimalGrid = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-0">
-                {/* Animal Image */}
+                {/* Animal Emoji */}
                 <div className={`relative ${animal.color} p-8 flex items-center justify-center`}>
-                  <img 
-                    src={animal.image} 
-                    alt={animal.name}
-                    className="w-20 h-20 object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
+                  <div className="text-6xl group-hover:scale-110 transition-transform duration-500">
+                    {animal.emoji}
+                  </div>
                   <div className="absolute top-2 right-2">
                     <Heart className="w-6 h-6 text-white/80 group-hover:text-red-500 group-hover:scale-125 transition-all duration-300" />
                   </div>
