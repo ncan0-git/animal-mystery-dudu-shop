@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Gift, Sparkles, Star, ShoppingCart } from "lucide-react";
+import { Gift, Sparkles, Star } from "lucide-react";
 import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422a9.png";
 
 export const Hero = () => {
@@ -13,8 +13,12 @@ export const Hero = () => {
     document.getElementById('purchase')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const goToProduct = () => {
-    window.location.href = '/product';
+  const scrollToProducts = () => {
+    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -28,14 +32,20 @@ export const Hero = () => {
               alt="DuDu Animal Party Logo" 
               className="h-12 sm:h-16 lg:h-20 xl:h-24 w-auto"
             />
-            <Button 
-              variant="outline"
-              onClick={scrollToPurchase}
-              className="border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat"
-            >
-              <ShoppingCart className="w-4 h-4 mr-2" />
-              Checkout
-            </Button>
+            <nav className="flex gap-6">
+              <button 
+                onClick={scrollToProducts}
+                className="text-foreground/80 hover:text-primary-green-dark transition-colors cursor-pointer"
+              >
+                Products
+              </button>
+              <button 
+                onClick={scrollToContact}
+                className="text-foreground/80 hover:text-primary-green-dark transition-colors cursor-pointer"
+              >
+                Contact Us
+              </button>
+            </nav>
           </div>
         </div>
       </div>
@@ -68,7 +78,7 @@ export const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
-                onClick={goToProduct}
+                onClick={scrollToPurchase}
               >
                 <Gift className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
                 Get Your Mystery Box - $20

@@ -10,7 +10,7 @@ export const ProductGallery = () => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-white to-green-50">
+    <section id="products" className="py-16 px-4 bg-gradient-to-br from-white to-green-50">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
