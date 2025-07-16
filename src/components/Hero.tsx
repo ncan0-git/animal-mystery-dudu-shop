@@ -75,7 +75,7 @@ export const Hero = () => {
           </div>
 
           {/* Right side - Mystery box image */}
-          <div className="flex justify-center lg:justify-end lg:pl-4">
+          <div className="flex justify-center lg:justify-center lg:pr-8">
             <div className="relative">
               <img 
                 src={mysteryBoxImage} 
