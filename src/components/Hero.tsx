@@ -24,7 +24,7 @@ export const Hero = () => {
   return (
     <section className="min-h-screen bg-gradient-hero">
       {/* Header with Logo */}
-      <div className="w-full bg-background/50">
+      <div className="w-full bg-header-background">
         <div className="container mx-auto px-4 pt-8 pb-4">
           <div className="flex justify-between items-center">
             <img 
