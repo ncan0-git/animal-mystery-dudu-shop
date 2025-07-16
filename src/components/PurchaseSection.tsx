@@ -37,11 +37,11 @@ export const PurchaseSection = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-6 h-6 text-pink-bunny-dark animate-bounce-gentle" />
+            <Sparkles className="w-6 h-6 text-primary-green-dark animate-bounce-gentle" />
             <Badge variant="secondary" className="text-lg px-4 py-2 bg-gradient-primary text-white">
               Ready for Your Surprise?
             </Badge>
-            <Sparkles className="w-6 h-6 text-pink-bunny-dark animate-bounce-gentle" />
+            <Sparkles className="w-6 h-6 text-primary-green-dark animate-bounce-gentle" />
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -85,7 +85,7 @@ export const PurchaseSection = () => {
           </div>
 
           {/* Purchase Card */}
-          <Card className="bg-gradient-card shadow-hover border-2 border-pink-bunny-dark relative overflow-hidden">
+          <Card className="bg-gradient-card shadow-hover border-2 border-primary-green-dark relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-primary opacity-5"></div>
             
             <CardHeader className="text-center relative z-10">
@@ -148,11 +148,11 @@ export const PurchaseSection = () => {
 
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
-            <Heart className="w-5 h-5 text-pink-bunny-dark" />
+            <Heart className="w-5 h-5 text-primary-green-dark" />
             <span className="text-foreground/80">
               Join thousands of happy collectors worldwide!
             </span>
-            <Heart className="w-5 h-5 text-pink-bunny-dark" />
+            <Heart className="w-5 h-5 text-primary-green-dark" />
           </div>
         </div>
       </div>

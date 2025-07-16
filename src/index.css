@@ -6,12 +6,14 @@
 
 @layer base {
   :root {
-    --background: 320 30% 97%;
+    --background: 120 30% 97%;
     --foreground: 222.2 84% 4.9%;
 
-    /* Animal-inspired color palette */
-    --pink-bunny: 330 80% 85%;
-    --pink-bunny-dark: 330 60% 70%;
+    /* Animal-inspired color palette - Green theme */
+    --primary-green: 120 70% 75%;
+    --primary-green-dark: 120 60% 60%;
+    --pink-bunny: 350 70% 85%;
+    --pink-bunny-dark: 350 60% 70%;
     --white-panda: 0 0% 95%;
     --white-panda-dark: 0 0% 85%;
     --green-frog: 120 60% 75%;
@@ -25,15 +27,15 @@
     --brown-bear: 30 40% 65%;
     --brown-bear-dark: 30 50% 50%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--pink-bunny)), hsl(var(--blue-elephant)));
-    --gradient-hero: linear-gradient(180deg, hsl(320 40% 98%), hsl(320 30% 95%));
+    /* Gradients - Green theme */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-green)), hsl(var(--blue-elephant)));
+    --gradient-hero: linear-gradient(180deg, hsl(120 40% 98%), hsl(120 30% 95%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(0 0% 98% / 0.6));
 
-    /* Shadows */
-    --shadow-soft: 0 4px 20px hsl(320 30% 85% / 0.3);
-    --shadow-card: 0 8px 30px hsl(320 40% 80% / 0.2);
-    --shadow-hover: 0 12px 40px hsl(320 50% 75% / 0.3);
+    /* Shadows - Green theme */
+    --shadow-soft: 0 4px 20px hsl(120 30% 85% / 0.3);
+    --shadow-card: 0 8px 30px hsl(120 40% 80% / 0.2);
+    --shadow-hover: 0 12px 40px hsl(120 50% 75% / 0.3);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;

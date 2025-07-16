@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Gift, Sparkles, Star } from "lucide-react";
-import mysteryBoxImage from "@/assets/mystery-box.jpg";
+import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422a9.png";
 
 export const Hero = () => {
   const scrollToAnimals = () => {
@@ -19,7 +19,7 @@ export const Hero = () => {
           {/* Left side - Text content */}
           <div className="text-center lg:text-left space-y-8">
             <div className="space-y-4">
-              <div className="flex items-center justify-center lg:justify-start gap-2 text-pink-bunny-dark">
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-primary-green-dark">
                 <Sparkles className="w-6 h-6 animate-bounce-gentle" />
                 <span className="text-lg font-semibold">Mystery Awaits!</span>
                 <Sparkles className="w-6 h-6 animate-bounce-gentle" />
@@ -40,7 +40,7 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-pink-bunny hover:bg-pink-bunny-dark text-black-cat font-semibold px-8 py-6 text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
+                className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-8 py-6 text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
                 onClick={scrollToPurchase}
               >
                 <Gift className="w-5 h-5 mr-2" />
@@ -50,7 +50,7 @@ export const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-pink-bunny-dark text-pink-bunny-dark hover:bg-pink-bunny hover:text-black-cat px-8 py-6 text-lg transition-all duration-300"
+                className="border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat px-8 py-6 text-lg transition-all duration-300"
                 onClick={scrollToAnimals}
               >
                 <Star className="w-5 h-5 mr-2" />
@@ -76,18 +76,17 @@ export const Hero = () => {
 
           {/* Right side - Mystery box image */}
           <div className="flex justify-center">
-            <Card className="relative p-8 bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 hover:scale-105 group">
-              <div className="absolute inset-0 bg-gradient-primary opacity-10 rounded-lg group-hover:opacity-20 transition-opacity duration-500"></div>
+            <div className="relative">
               <img 
                 src={mysteryBoxImage} 
                 alt="DuDu Animal Party Mystery Box" 
-                className="relative z-10 w-full max-w-md mx-auto rounded-lg shadow-soft"
+                className="w-full max-w-md mx-auto rounded-lg shadow-soft object-contain"
               />
               <div className="absolute -top-2 -right-2 w-12 h-12 bg-orange-fox rounded-full flex items-center justify-center shadow-card animate-bounce-gentle">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
               <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-green-frog rounded-full animate-wiggle"></div>
-            </Card>
+            </div>
           </div>
         </div>
       </div>
