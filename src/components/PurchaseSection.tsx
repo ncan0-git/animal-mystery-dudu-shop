@@ -32,7 +32,7 @@ export const PurchaseSection = () => {
   };
 
   return (
-    <section id="purchase" className="py-20 px-4 bg-gradient-hero">
+    <section id="purchase" className="pt-12 pb-20 px-4 bg-gradient-hero">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
