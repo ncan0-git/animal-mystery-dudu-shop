@@ -81,7 +81,7 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
+                className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300"
                 onClick={goToProduct}
               >
                 <Gift className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
@@ -107,7 +107,7 @@ export const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-blue-elephant rounded-full"></div>
-                <span>8 Possible Animals</span>
+                <span>7 Possible Animals</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-orange-fox rounded-full"></div>

@@ -231,7 +231,7 @@ const Product = () => {
                 <CardContent className="p-0 space-y-2">
                   <Gift className="w-8 h-8 text-orange-fox mx-auto" />
                   <p className="text-sm font-semibold">Surprise Inside</p>
-                  <p className="text-xs text-foreground/60">8 possible animals</p>
+                  <p className="text-xs text-foreground/60">7 possible animals</p>
                 </CardContent>
               </Card>
             </div>
@@ -255,7 +255,7 @@ const Product = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <Star className="w-4 h-4 text-orange-fox" />
-                    8 possible animals to collect
+                    7 possible animals to collect
                   </li>
                 </ul>
               </CardContent>
