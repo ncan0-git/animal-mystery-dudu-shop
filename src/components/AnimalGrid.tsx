@@ -77,12 +77,12 @@ export const AnimalGrid = () => {
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Eight Adorable Animals
+              Seven Adorable Animals
             </span>
           </h2>
           
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            Each mystery box contains one of these eight cute companions. 
+            Each mystery box contains one of these seven cute companions. 
             Which one will you discover? The excitement is part of the magic!
           </p>
         </div>

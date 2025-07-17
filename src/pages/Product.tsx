@@ -139,7 +139,7 @@ const Product = () => {
               
               <p className="text-xl text-foreground/70 leading-relaxed">
                 Discover the magic of surprise with our adorable mystery box! 
-                Each box contains one of eight cute DuDu Animal keychains waiting to become your new friend.
+                Each box contains one of seven cute DuDu Animal keychains waiting to become your new friend.
               </p>
             </div>
 

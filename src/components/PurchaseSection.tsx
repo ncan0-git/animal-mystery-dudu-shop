@@ -7,7 +7,7 @@ const features = [
   {
     icon: Gift,
     title: "Mystery Surprise",
-    description: "One of 8 adorable DuDu Animals waiting inside"
+    description: "One of 7 adorable DuDu Animals waiting inside"
   },
   {
     icon: Truck,

@@ -74,7 +74,7 @@ export const Hero = () => {
             {/* Description */}
             <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
               Discover the magic of surprise with our adorable mystery box! 
-              Each box contains one of eight cute DuDu Animal dolls waiting to become your new friend.
+              Each box contains one of seven cute DuDu Animal dolls waiting to become your new friend.
             </p>
 
             {/* Action buttons */}
