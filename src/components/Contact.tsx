@@ -152,17 +152,13 @@ export const Contact = () => {
                         <p className="text-foreground/70 mb-2">
                           Send us an email for detailed inquiries
                         </p>
-                        <div className="text-center">
-                          <p className="text-primary-green font-medium">
-                            support@duduanimalparty.com
-                          </p>
-                        </div>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-sm text-foreground/60 mt-auto">
-                          24/7 Response Time
+                        <p className="text-primary-green font-medium">
+                          support@duduanimalparty.com
                         </p>
                       </div>
+                      <p className="text-sm text-foreground/60 mt-auto">
+                        24/7 Response Time
+                      </p>
                     </div>
                   </div>
                 </CardContent>
