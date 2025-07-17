@@ -69,9 +69,13 @@ export const Hero = () => {
         <div className="container mx-auto px-4 py-8 lg:py-16">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
             
-            {/* Empty space where image used to be - now background covers whole section */}
+            {/* DuDu Animal Party image */}
             <div className="flex justify-center order-1 lg:order-2">
-              <div className="w-full max-w-md lg:max-w-lg h-80 lg:h-96" />
+              <img 
+                src="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png" 
+                alt="DuDu Animal Party Characters" 
+                className="w-full max-w-md lg:max-w-lg h-auto object-contain"
+              />
             </div>
 
             {/* Text content - shows second on mobile */}
