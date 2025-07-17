@@ -79,7 +79,9 @@ export const Hero = () => {
             </div>
 
             {/* Text content - shows second on mobile */}
-            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1">
+            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1 relative">
+              {/* Background rectangle */}
+              <div className="absolute inset-0 bg-muted/80 rounded-2xl -z-10" style={{ height: 'auto' }}></div>
               
               {/* Description */}
               <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
