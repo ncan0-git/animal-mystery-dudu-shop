@@ -59,7 +59,7 @@ export const Hero = () => {
           
           {/* Mystery box image - shows first on mobile */}
           <div className="flex justify-center order-1 lg:order-2">
-            <div className="relative w-full max-w-sm lg:max-w-md">
+            <div className="relative w-full max-w-md lg:max-w-lg">
               <img 
                 src={mysteryBoxImage} 
                 alt="DuDu Animal Party Mystery Box" 
