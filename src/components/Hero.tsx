@@ -43,11 +43,14 @@ export const Hero = () => {
         <div className="w-full">
           <div className="container mx-auto px-4 pt-8 pb-4">
             <div className="flex justify-between items-center">
-              <img 
-                src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
-                alt="DuDu Animal Party Logo" 
-                className="h-12 sm:h-16 lg:h-20 xl:h-24 w-auto"
-              />
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
+                  alt="DuDu Animal Party Logo" 
+                  className="h-12 sm:h-16 lg:h-20 xl:h-24 w-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-transparent"></div>
+              </div>
               <nav className="flex gap-6">
                 <button 
                   onClick={scrollToProducts}
