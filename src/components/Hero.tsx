@@ -57,15 +57,12 @@ export const Hero = () => {
       <div className="container mx-auto px-4 py-8 lg:py-16">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
           
-          {/* Mystery box image - shows first on mobile */}
+          {/* Background image section */}
           <div className="flex justify-center order-1 lg:order-2">
-            <div className="relative w-full max-w-md lg:max-w-lg">
-              <img 
-                src={mysteryBoxImage} 
-                alt="DuDu Animal Party Mystery Box" 
-                className="w-full h-auto rounded-lg shadow-soft object-contain"
-              />
-            </div>
+            <div 
+              className="relative w-full max-w-md lg:max-w-lg h-80 lg:h-96 bg-cover bg-center bg-no-repeat rounded-lg shadow-soft"
+              style={{ backgroundImage: 'url(/lovable-uploads/2f89b7f6-2895-46db-adae-0f9b9fa41f82.png)' }}
+            />
           </div>
 
           {/* Text content - shows second on mobile */}
