@@ -74,7 +74,7 @@ export const Hero = () => {
               <img 
                 src="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png" 
                 alt="DuDu Animal Party Characters" 
-                className="w-full max-w-md lg:max-w-lg h-auto object-contain"
+                className="w-full max-w-md lg:max-w-lg h-auto object-contain rounded-2xl shadow-lg"
               />
             </div>
 
