@@ -66,7 +66,7 @@ export const Contact = () => {
           
           {/* Contact Form - Full width on mobile, max-width on desktop */}
           <div className="w-full max-w-2xl mb-12">
-            <Card className="bg-gradient-card shadow-card border-none">
+            <Card className="bg-gradient-card shadow-card border-4 border-primary-green/30">
               <CardContent className="p-6 sm:p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 bg-gradient-primary rounded-full">
