@@ -79,7 +79,7 @@ export const Hero = () => {
             </div>
 
             {/* Text content - shows second on mobile */}
-            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1 relative py-8 px-8">
+            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1 relative py-6 px-8">
               {/* Background rectangle */}
               <div className="absolute inset-0 bg-muted/80 rounded-2xl -z-10"></div>
               
