@@ -79,53 +79,51 @@ export const Hero = () => {
             </div>
 
             {/* Text content - shows second on mobile */}
-            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1 relative flex justify-center">
-              {/* Background rectangle matching image size */}
-              <div className="absolute inset-0 bg-muted/80 rounded-2xl -z-10 w-full max-w-md lg:max-w-lg mx-auto"></div>
-              <div className="relative z-10 p-6 lg:p-8 w-full max-w-md lg:max-w-lg space-y-6 lg:space-y-8">
+            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1 relative">
+              {/* Background rectangle */}
+              <div className="absolute inset-0 bg-muted/80 rounded-2xl -z-10" style={{ height: 'auto' }}></div>
               
-                {/* Description */}
-                <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed text-center">
-                  Discover the magic of surprise with our adorable mystery box! 
-                  Each box contains one of seven cute DuDu Animal dolls waiting to become your new friend.
-                </p>
+              {/* Description */}
+              <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
+                Discover the magic of surprise with our adorable mystery box! 
+                Each box contains one of seven cute DuDu Animal dolls waiting to become your new friend.
+              </p>
 
-                {/* Action buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    size="lg" 
-                    className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300"
-                    onClick={goToProduct}
-                  >
-                    <Gift className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
-                    Get Your Mystery Box
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg transition-all duration-300"
-                    onClick={scrollToAnimals}
-                  >
-                    <Star className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
-                    Meet the Animals
-                  </Button>
+              {/* Action buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300"
+                  onClick={goToProduct}
+                >
+                  <Gift className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
+                  Get Your Mystery Box
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg transition-all duration-300"
+                  onClick={scrollToAnimals}
+                >
+                  <Star className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
+                  Meet the Animals
+                </Button>
+              </div>
+
+              {/* Feature indicators */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm text-foreground/60">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-green-frog rounded-full"></div>
+                  <span>Free Shipping Included</span>
                 </div>
-
-                {/* Feature indicators */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm text-foreground/60">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-green-frog rounded-full"></div>
-                    <span>Free Shipping Included</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-blue-elephant rounded-full"></div>
-                    <span>7 Possible Animals</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-orange-fox rounded-full"></div>
-                    <span>Surprise Inside</span>
-                  </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-blue-elephant rounded-full"></div>
+                  <span>7 Possible Animals</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 bg-orange-fox rounded-full"></div>
+                  <span>Surprise Inside</span>
                 </div>
               </div>
             </div>
