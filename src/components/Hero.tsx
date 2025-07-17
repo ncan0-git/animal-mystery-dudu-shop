@@ -35,6 +35,8 @@ export const Hero = () => {
           filter: 'blur(2px)'
         }}
       />
+      {/* Left half white overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
@@ -73,7 +75,7 @@ export const Hero = () => {
             </div>
 
             {/* Text content - shows second on mobile */}
-            <div className="text-center lg:text-left space-y-6 lg:space-y-8 order-2 lg:order-1 bg-white/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8">
+            <div className="text-center lg:text-left space-y-6 lg:space-y-8 order-2 lg:order-1">
               
               {/* Description */}
               <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
