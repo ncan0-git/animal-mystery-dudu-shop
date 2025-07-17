@@ -85,7 +85,7 @@ export const Hero = () => {
                 onClick={goToProduct}
               >
                 <Gift className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
-                Get Your Mystery Box - $20
+                Get Your Mystery Box
               </Button>
               
               <Button 
