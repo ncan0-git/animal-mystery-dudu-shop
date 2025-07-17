@@ -138,7 +138,7 @@ export const Contact = () => {
           <div className="w-full max-w-2xl">
             <h3 className="text-2xl font-semibold mb-8 text-center lg:text-left">Other Ways to Reach Us</h3>
             
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 mb-8 justify-items-center md:justify-items-stretch">
+            <div className="flex flex-col md:flex-row gap-6 mb-8 items-center md:items-stretch">
               {/* Email */}
               <Card className="group bg-gradient-card shadow-card hover:shadow-hover transition-all duration-300 border-green-frog/20 hover:border-green-frog/40">
                 <CardContent className="p-6">
