@@ -35,6 +35,8 @@ export const Hero = () => {
           filter: 'blur(2px)'
         }}
       />
+      {/* Blur overlay */}
+      <div className="absolute inset-0 backdrop-blur-sm bg-background/20" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
