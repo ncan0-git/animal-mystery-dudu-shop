@@ -138,23 +138,25 @@ export const Contact = () => {
           <div className="w-full max-w-2xl">
             <h3 className="text-2xl font-semibold mb-8 text-center lg:text-left">Other Ways to Reach Us</h3>
             
-            <div className="flex flex-col md:flex-row gap-6 mb-8 items-center md:items-stretch">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Email */}
-              <Card className="group bg-gradient-card shadow-card hover:shadow-hover transition-all duration-300 border-green-frog/20 hover:border-green-frog/40 flex-1">
-                <CardContent className="p-6 h-full">
-                  <div className="flex items-start gap-4 h-full">
-                    <div className="p-3 bg-green-frog rounded-full group-hover:scale-110 transition-transform duration-300">
+              <Card className="group bg-gradient-card shadow-card hover:shadow-hover transition-all duration-300 border-green-frog/20 hover:border-green-frog/40 h-48">
+                <CardContent className="p-6 h-full flex">
+                  <div className="flex items-start gap-4 w-full">
+                    <div className="p-3 bg-green-frog rounded-full group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-2">Email Support</h4>
-                      <p className="text-foreground/70 mb-2">
-                        Send us an email for detailed inquiries
-                      </p>
-                      <p className="text-primary-green font-medium">
-                        support@duduanimalparty.com
-                      </p>
-                      <p className="text-sm text-foreground/60 mt-1">
+                    <div className="flex-1 flex flex-col justify-between">
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2">Email Support</h4>
+                        <p className="text-foreground/70 mb-2">
+                          Send us an email for detailed inquiries
+                        </p>
+                        <p className="text-primary-green font-medium">
+                          support@duduanimalparty.com
+                        </p>
+                      </div>
+                      <p className="text-sm text-foreground/60 mt-auto">
                         24/7 Response Time
                       </p>
                     </div>
@@ -163,28 +165,29 @@ export const Contact = () => {
               </Card>
 
               {/* Phone */}
-              <Card className="group bg-gradient-card shadow-card hover:shadow-hover transition-all duration-300 border-blue-elephant/20 hover:border-blue-elephant/40 flex-1">
-                <CardContent className="p-6 h-full">
-                  <div className="flex items-start gap-4 h-full">
-                    <div className="p-3 bg-blue-elephant rounded-full group-hover:scale-110 transition-transform duration-300">
+              <Card className="group bg-gradient-card shadow-card hover:shadow-hover transition-all duration-300 border-blue-elephant/20 hover:border-blue-elephant/40 h-48">
+                <CardContent className="p-6 h-full flex">
+                  <div className="flex items-start gap-4 w-full">
+                    <div className="p-3 bg-blue-elephant rounded-full group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-2">Phone Support</h4>
-                      <p className="text-foreground/70 mb-2">
-                        Call us during business hours
-                      </p>
-                      <p className="text-primary-green font-medium">
-                        +1 (609) 405-7249
-                      </p>
-                      <p className="text-sm text-foreground/60 mt-1">
+                    <div className="flex-1 flex flex-col justify-between">
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2">Phone Support</h4>
+                        <p className="text-foreground/70 mb-2">
+                          Call us during business hours
+                        </p>
+                        <p className="text-primary-green font-medium">
+                          +1 (609) 405-7249
+                        </p>
+                      </div>
+                      <p className="text-sm text-foreground/60 mt-auto">
                         Mon-Fri: 9AM-6PM EST
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-
             </div>
 
             {/* FAQ Note - Centered */}
