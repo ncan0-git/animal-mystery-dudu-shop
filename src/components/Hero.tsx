@@ -36,7 +36,7 @@ export const Hero = () => {
         }}
       />
       {/* Left half white overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-background/15 to-transparent" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
@@ -75,7 +75,7 @@ export const Hero = () => {
             </div>
 
             {/* Text content - shows second on mobile */}
-            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1">
+            <div className="text-center lg:text-left space-y-6 lg:space-y-8 order-2 lg:order-1">
               
               {/* Description */}
               <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
