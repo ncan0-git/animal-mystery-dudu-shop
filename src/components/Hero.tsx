@@ -67,21 +67,21 @@ export const Hero = () => {
         </div>
 
         <div className="container mx-auto px-4 py-8 lg:py-16">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
+          <div className="flex justify-center items-center min-h-[70vh]">
             
-            {/* DuDu Animal Party image */}
-            <div className="flex justify-center order-1 lg:order-2">
-              <img 
-                src="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png" 
-                alt="DuDu Animal Party Characters" 
-                className="w-full max-w-md lg:max-w-lg h-auto object-contain rounded-2xl shadow-lg"
-              />
-            </div>
-
-            {/* Text content - shows second on mobile */}
-            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1 relative py-6 px-8">
+            {/* Combined content in white rectangle */}
+            <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
               {/* Background rectangle */}
               <div className="absolute inset-0 bg-muted/80 border border-border/50 rounded-2xl -z-10"></div>
+              
+              {/* DuDu Animal Party image */}
+              <div className="flex justify-center mb-6">
+                <img 
+                  src="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png" 
+                  alt="DuDu Animal Party Characters" 
+                  className="w-full max-w-sm lg:max-w-md h-auto object-contain rounded-2xl shadow-lg"
+                />
+              </div>
               
               {/* Description */}
               <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
