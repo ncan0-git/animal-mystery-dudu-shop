@@ -41,7 +41,7 @@ export const Hero = () => {
       <div className="relative z-10">
         {/* Header with Logo */}
         <div className="w-full relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/95 to-transparent"></div>
           <div className="container mx-auto px-4 pt-8 pb-4 relative z-10">
             <div className="flex justify-between items-center">
               <img 
