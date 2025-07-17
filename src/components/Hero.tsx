@@ -32,7 +32,7 @@ export const Hero = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ 
           backgroundImage: 'url(/lovable-uploads/83d9cb30-734f-42ba-bfab-7dfbb53c33c7.png)',
-          filter: 'blur(2px)'
+          filter: 'blur(8px)'
         }}
       />
       {/* Blur overlay */}
