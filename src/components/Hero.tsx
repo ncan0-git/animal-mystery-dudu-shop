@@ -35,8 +35,6 @@ export const Hero = () => {
           filter: 'blur(2px)'
         }}
       />
-      {/* Left half white overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
