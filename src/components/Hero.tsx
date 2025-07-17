@@ -75,7 +75,7 @@ export const Hero = () => {
             </div>
 
             {/* Text content - shows second on mobile */}
-            <div className="text-center lg:text-left space-y-6 lg:space-y-8 order-2 lg:order-1">
+            <div className="text-center space-y-6 lg:space-y-8 order-2 lg:order-1">
               
               {/* Description */}
               <p className="text-lg sm:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">
@@ -84,7 +84,7 @@ export const Hero = () => {
               </p>
 
               {/* Action buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
                   className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-sm lg:text-lg shadow-card hover:shadow-hover transition-all duration-300"
@@ -106,7 +106,7 @@ export const Hero = () => {
               </div>
 
               {/* Feature indicators */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-6 text-sm text-foreground/60">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm text-foreground/60">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 bg-green-frog rounded-full"></div>
                   <span>Free Shipping Included</span>
