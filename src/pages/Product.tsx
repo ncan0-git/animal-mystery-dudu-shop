@@ -79,35 +79,35 @@ const Product = () => {
     <div className="min-h-screen bg-background">
       {/* Header with Logo */}
       <header className="w-full relative bg-background/95 backdrop-blur-md shadow-lg border-b border-border/20">
-        <div className="container mx-auto px-6 py-2">
+        <div className="container mx-auto px-4 sm:px-6 py-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <img 
                 src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
                 alt="DuDu Animal Party Logo" 
-                className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm"
+                className="h-6 sm:h-8 lg:h-10 w-auto drop-shadow-sm"
               />
             </div>
-            <nav className="flex items-center gap-8">
+            <nav className="flex items-center gap-2 sm:gap-4 lg:gap-8">
               <button 
                 onClick={scrollToProducts}
-                className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="hidden sm:block text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 Products
               </button>
               <button 
                 onClick={scrollToContact}
-                className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="hidden sm:block text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 Contact Us
               </button>
               <Button 
                 variant="ghost" 
                 onClick={() => navigate('/')}
-                className="hover:bg-primary-green/10"
+                className="hover:bg-primary-green/10 text-xs sm:text-sm px-2 sm:px-4"
               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Home
+                <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                <span className="hidden xs:inline">Back to </span>Home
               </Button>
             </nav>
           </div>
