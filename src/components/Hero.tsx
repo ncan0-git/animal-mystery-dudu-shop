@@ -32,8 +32,8 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: 'url(/lovable-uploads/399a7463-02ad-4a6b-b310-0750bbf87afa.png)'
     }} />
-      {/* Blur overlay */}
-      <div className="absolute inset-0 backdrop-blur-sm bg-background/20" />
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-background/20" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
