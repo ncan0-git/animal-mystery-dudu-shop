@@ -61,29 +61,58 @@ const Product = () => {
     });
   };
 
+  const scrollToProducts = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  const scrollToContact = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header with Logo */}
-      <div className="w-full relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/60 to-transparent h-32"></div>
-        <div className="container mx-auto px-4 pt-8 pb-4 relative z-10">
+      <header className="w-full relative bg-background/95 backdrop-blur-md shadow-lg border-b border-border/20">
+        <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <img 
-              src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
-              alt="DuDu Animal Party Logo" 
-              className="h-10 sm:h-12 lg:h-16 xl:h-20 w-auto"
-            />
-            <Button 
-              variant="ghost" 
-              onClick={() => navigate('/')}
-              className="hover:bg-primary-green/10"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
+                alt="DuDu Animal Party Logo" 
+                className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm"
+              />
+            </div>
+            <nav className="flex items-center gap-8">
+              <button 
+                onClick={scrollToProducts}
+                className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              >
+                Products
+              </button>
+              <button 
+                onClick={scrollToContact}
+                className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              >
+                Contact Us
+              </button>
+              <Button 
+                variant="ghost" 
+                onClick={() => navigate('/')}
+                className="hover:bg-primary-green/10"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Home
+              </Button>
+            </nav>
           </div>
         </div>
-      </div>
+      </header>
 
       <div className="container mx-auto px-4 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
