@@ -66,7 +66,7 @@ export const Hero = () => {
               {/* DuDu Animal Party video player */}
               <div className="flex justify-center mb-6">
                 <VideoPlayer 
-                  thumbnailSrc="/lovable-uploads/1b63a104-f2b5-4a07-a83b-07e4b6992bff.png"
+                  thumbnailSrc="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png"
                   videoSrc="/path-to-your-video.mp4"
                   alt="DuDu Animal Party Characters"
                   className="w-full max-w-sm lg:max-w-md"
