@@ -27,7 +27,7 @@ export const Hero = () => {
   const goToProduct = () => {
     window.location.href = '/product';
   };
-  return <section className="min-h-[85vh] bg-gradient-hero relative shadow-lg">
+  return <section className="min-h-[80vh] bg-gradient-hero relative shadow-lg">
       {/* Background image with blur */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: 'url(/lovable-uploads/399a7463-02ad-4a6b-b310-0750bbf87afa.png)'
@@ -55,11 +55,11 @@ export const Hero = () => {
           </div>
         </header>
 
-        <div className="container mx-auto px-4 py-8 lg:py-0 flex justify-center items-center" style={{ minHeight: 'calc(85vh - 80px)' }}>
-          <div className="w-full max-w-4xl">
+        <div className="container mx-auto px-4 py-8 lg:py-12">
+          <div className="flex justify-center items-center min-h-[50vh]">
             
             {/* Combined content in white rectangle */}
-            <div className="text-center space-y-4 sm:space-y-6 lg:space-y-8 relative py-4 px-4 sm:py-6 sm:px-8 w-full mx-auto">
+            <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
               {/* Background rectangle */}
               <div className="absolute inset-0 bg-background/95 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
               
