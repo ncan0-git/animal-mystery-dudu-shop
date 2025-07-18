@@ -27,15 +27,13 @@ export const Hero = () => {
   const goToProduct = () => {
     window.location.href = '/product';
   };
-  return <section className="min-h-[80vh] bg-gradient-hero relative">
+  return <section className="min-h-[80vh] bg-gradient-hero relative shadow-lg">
       {/* Background image with blur */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: 'url(/lovable-uploads/399a7463-02ad-4a6b-b310-0750bbf87afa.png)'
     }} />
       {/* Background overlay */}
       <div className="absolute inset-0 bg-background/20" />
-      {/* Bottom fade gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/30 to-transparent" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
