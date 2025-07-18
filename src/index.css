@@ -10,14 +10,14 @@
     --foreground: 222.2 84% 4.9%;
 
     /* Animal-inspired color palette - Green theme */
-    --primary-green: 120 70% 75%;
-    --primary-green-dark: 120 60% 60%;
+    --primary-green: 120 70% 65%;
+    --primary-green-dark: 120 60% 50%;
     --pink-bunny: 350 70% 85%;
     --pink-bunny-dark: 350 60% 70%;
     --white-panda: 0 0% 95%;
     --white-panda-dark: 0 0% 85%;
-    --green-frog: 120 60% 75%;
-    --green-frog-dark: 120 50% 60%;
+    --green-frog: 120 60% 65%;
+    --green-frog-dark: 120 50% 50%;
     --blue-elephant: 210 70% 80%;
     --blue-elephant-dark: 210 60% 65%;
     --orange-fox: 25 85% 75%;
