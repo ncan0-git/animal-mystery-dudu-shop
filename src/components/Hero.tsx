@@ -26,7 +26,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-hero relative">
+    <section className="min-h-[80vh] bg-gradient-hero relative">
       {/* Background image with blur */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
