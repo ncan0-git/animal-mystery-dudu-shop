@@ -55,11 +55,11 @@ export const Hero = () => {
           </div>
         </header>
 
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center items-center min-h-[calc(85vh-80px)]">
+        <div className="container mx-auto px-4 flex justify-center items-center" style={{ minHeight: 'calc(85vh - 80px)' }}>
+          <div className="w-full max-w-4xl">
             
             {/* Combined content in white rectangle */}
-            <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
+            <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 w-full mx-auto">
               {/* Background rectangle */}
               <div className="absolute inset-0 bg-background/95 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
               
