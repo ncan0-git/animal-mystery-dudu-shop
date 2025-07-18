@@ -34,6 +34,8 @@ export const Hero = () => {
     }} />
       {/* Background overlay */}
       <div className="absolute inset-0 bg-background/20" />
+      {/* Bottom fade gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
@@ -61,7 +63,7 @@ export const Hero = () => {
             {/* Combined content in white rectangle */}
             <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
               {/* Background rectangle */}
-              <div className="absolute inset-0 bg-background/90 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
+              <div className="absolute inset-0 bg-background/95 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
               
               {/* DuDu Animal Party video player */}
               <div className="flex justify-center mb-6">
