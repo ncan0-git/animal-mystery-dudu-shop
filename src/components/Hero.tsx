@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Gift, Sparkles, Star } from "lucide-react";
+import { VideoPlayer } from "./VideoPlayer";
 import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422a9.png";
 export const Hero = () => {
   const scrollToAnimals = () => {
@@ -44,10 +45,10 @@ export const Hero = () => {
                 <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm" />
               </div>
               <nav className="flex items-center gap-8">
-                <button onClick={scrollToProducts} className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
+                <button onClick={scrollToProducts} className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base">
                   Products
                 </button>
-                <button onClick={scrollToContact} className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
+                <button onClick={scrollToContact} className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base">
                   Contact Us
                 </button>
               </nav>
@@ -63,9 +64,14 @@ export const Hero = () => {
               {/* Background rectangle */}
               <div className="absolute inset-0 bg-background/90 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
               
-              {/* DuDu Animal Party image */}
+              {/* DuDu Animal Party video player */}
               <div className="flex justify-center mb-6">
-                <img src="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png" alt="DuDu Animal Party Characters" className="w-full max-w-sm lg:max-w-md h-auto object-contain rounded-2xl shadow-lg" />
+                <VideoPlayer 
+                  thumbnailSrc="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png"
+                  videoSrc="/path-to-your-video.mp4"
+                  alt="DuDu Animal Party Characters"
+                  className="w-full max-w-sm lg:max-w-md"
+                />
               </div>
               
               {/* Description */}
