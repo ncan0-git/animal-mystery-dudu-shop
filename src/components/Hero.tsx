@@ -35,7 +35,7 @@ export const Hero = () => {
       {/* Background overlay */}
       <div className="absolute inset-0 bg-background/20" />
       {/* Bottom fade gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/30 to-transparent" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
