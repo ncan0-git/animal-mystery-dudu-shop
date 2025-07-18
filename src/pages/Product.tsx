@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star, Heart, Shield, Truck, Gift, ArrowLeft, ShoppingCart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { Footer } from "@/components/Footer";
 
 const Product = () => {
   const navigate = useNavigate();
@@ -302,6 +303,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

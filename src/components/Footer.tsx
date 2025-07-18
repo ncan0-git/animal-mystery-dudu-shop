@@ -36,7 +36,7 @@ export const Footer = () => {
 
           {/* Copyright */}
           <div className="border-t border-white/20 pt-6 text-xs text-white/50">
-            <p>&copy; 2024 DuDu Animal Party. All rights reserved. Bringing smiles, one mystery box at a time.</p>
+            <p>&copy; 2025 DuDu Animal Party. All rights reserved. Bringing smiles, one mystery box at a time.</p>
           </div>
         </div>
       </div>
