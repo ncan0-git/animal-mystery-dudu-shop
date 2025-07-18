@@ -6,7 +6,7 @@ import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422
 
 export const Hero = () => {
   const scrollToAnimals = () => {
-    document.getElementById('animals')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToPurchase = () => {
