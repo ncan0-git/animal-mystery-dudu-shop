@@ -31,7 +31,7 @@ export const Hero = () => {
       {/* Background image with blur */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: 'url(/lovable-uploads/399a7463-02ad-4a6b-b310-0750bbf87afa.png)',
-      filter: 'blur(4px)'
+      filter: 'blur(2px)'
     }} />
       {/* Blur overlay */}
       <div className="absolute inset-0 backdrop-blur-sm bg-background/20" />
