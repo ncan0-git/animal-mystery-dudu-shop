@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export const ProductGallery = () => {
   const productImages = [
-    "/lovable-uploads/a30870f6-f983-44f9-8476-3cbcea895534.png",
-    "/lovable-uploads/b14f9f5d-c73c-440d-b5e3-e7926411ae74.png", 
-    "/lovable-uploads/6ff44741-be38-4e0b-9605-316f7a60bd82.png"
+    "/lovable-uploads/1b63a104-f2b5-4a07-a83b-07e4b6992bff.png", // Collection view
+    "/lovable-uploads/d3c64ee9-48d2-4be5-8f48-c29136a234ca.png", // Panda and Cat
+    "/lovable-uploads/725805ee-dc40-48e6-a31c-8d0c9d3dd0fb.png"  // Fox and Frog
   ];
 
   const [selectedImage, setSelectedImage] = useState(0);
