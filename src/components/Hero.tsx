@@ -68,8 +68,8 @@ export const Hero = () => {
           </div>
         </header>
 
-        <div className="container mx-auto px-4 py-4 lg:py-8">
-          <div className="flex justify-center items-center min-h-[60vh]">
+        <div className="container mx-auto px-4 py-8 lg:py-12">
+          <div className="flex justify-center items-center min-h-[40vh] pt-8 lg:pt-12">
             
             {/* Combined content in white rectangle */}
             <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
