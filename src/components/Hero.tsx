@@ -64,7 +64,7 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-background/95 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
               
               {/* DuDu Animal Party video player */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center">
                 <VideoPlayer 
                   thumbnailSrc="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png"
                   videoSrc="/path-to-your-video.mp4"
