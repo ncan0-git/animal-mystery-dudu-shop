@@ -47,7 +47,7 @@ export const VideoPlayer = ({ thumbnailSrc, videoSrc, alt, className = "" }: Vid
               size="lg"
               className="bg-white/90 hover:bg-white text-black rounded-full p-4 shadow-lg"
             >
-              <Play className="w-8 h-8 ml-1" fill="currentColor" />
+              <Play className="w-7 h-7 ml-1" fill="currentColor" />
             </Button>
           </div>
         </div>
