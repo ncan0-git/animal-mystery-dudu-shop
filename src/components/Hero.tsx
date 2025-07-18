@@ -47,7 +47,7 @@ export const Hero = () => {
               <img 
                 src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
                 alt="DuDu Animal Party Logo" 
-                className="h-12 sm:h-16 lg:h-20 xl:h-24 w-auto"
+                className="h-10 sm:h-12 lg:h-16 xl:h-20 w-auto"
               />
               <nav className="flex gap-6">
                 <button 
@@ -67,8 +67,8 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-8 lg:py-16">
-          <div className="flex justify-center items-center min-h-[70vh]">
+        <div className="container mx-auto px-4 py-4 lg:py-8">
+          <div className="flex justify-center items-center min-h-[60vh]">
             
             {/* Combined content in white rectangle */}
             <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
