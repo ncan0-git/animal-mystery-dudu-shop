@@ -73,7 +73,7 @@ export const Hero = () => {
             {/* Combined content in white rectangle */}
             <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
               {/* Background rectangle */}
-              <div className="absolute inset-0 bg-muted/80 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
+              <div className="absolute inset-0 bg-muted border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
               
               {/* DuDu Animal Party image */}
               <div className="flex justify-center mb-6">
