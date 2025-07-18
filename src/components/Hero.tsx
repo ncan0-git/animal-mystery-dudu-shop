@@ -53,13 +53,13 @@ export const Hero = () => {
               <nav className="flex items-center gap-8">
                 <button 
                   onClick={scrollToProducts}
-                  className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                  className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   Products
                 </button>
                 <button 
                   onClick={scrollToContact}
-                  className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                  className="text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   Contact Us
                 </button>
