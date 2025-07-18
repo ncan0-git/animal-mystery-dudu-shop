@@ -27,6 +27,16 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen bg-gradient-hero relative">
+      {/* Background image with blur */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: 'url(/lovable-uploads/83d9cb30-734f-42ba-bfab-7dfbb53c33c7.png)',
+          filter: 'blur(8px)'
+        }}
+      />
+      {/* Blur overlay */}
+      <div className="absolute inset-0 backdrop-blur-sm bg-background/20" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
