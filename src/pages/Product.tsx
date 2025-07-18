@@ -85,7 +85,7 @@ const Product = () => {
               <img 
                 src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
                 alt="DuDu Animal Party Logo" 
-                className="h-6 sm:h-8 lg:h-10 w-auto drop-shadow-sm"
+                className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm"
               />
             </div>
             <nav className="flex items-center gap-2 sm:gap-4 lg:gap-8">
