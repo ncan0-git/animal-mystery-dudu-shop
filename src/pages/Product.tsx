@@ -230,7 +230,7 @@ const Product = () => {
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="w-full bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold py-6 text-lg shadow-card hover:shadow-hover transition-all duration-300 hover:scale-105"
+                className="w-full bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold py-6 text-lg shadow-card hover:shadow-hover transition-all duration-300"
                 onClick={handlePurchase}
               >
                 <ShoppingCart className="w-5 h-5 mr-2" />
