@@ -63,16 +63,26 @@ const Product = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <div className="container mx-auto px-4 py-6">
-        <Button 
-          variant="ghost" 
-          onClick={() => navigate('/')}
-          className="mb-6 hover:bg-primary-green/10"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Home
-        </Button>
+      {/* Header with Logo */}
+      <div className="w-full relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/60 to-transparent h-32"></div>
+        <div className="container mx-auto px-4 pt-8 pb-4 relative z-10">
+          <div className="flex justify-between items-center">
+            <img 
+              src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
+              alt="DuDu Animal Party Logo" 
+              className="h-10 sm:h-12 lg:h-16 xl:h-20 w-auto"
+            />
+            <Button 
+              variant="ghost" 
+              onClick={() => navigate('/')}
+              className="hover:bg-primary-green/10"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </div>
+        </div>
       </div>
 
       <div className="container mx-auto px-4 pb-16">
@@ -195,7 +205,7 @@ const Product = () => {
                 onClick={handlePurchase}
               >
                 <ShoppingCart className="w-5 h-5 mr-2" />
-                Add to Cart - ${price * quantity}
+                Add to Cart
               </Button>
               
               <Button 
