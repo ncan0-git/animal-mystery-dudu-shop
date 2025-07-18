@@ -78,7 +78,7 @@ const Product = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header with Logo */}
-      <header className="w-full relative bg-background/95 backdrop-blur-md shadow-lg border-b border-border/20">
+      <header className="w-full relative bg-background shadow-lg border-b border-border/20">
         <div className="container mx-auto px-4 sm:px-6 py-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">

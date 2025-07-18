@@ -37,7 +37,7 @@ export const Hero = () => {
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
-        <header className="w-full relative bg-white shadow-lg border-b border-border/20">
+        <header className="w-full relative bg-background shadow-lg border-b border-border/20">
           <div className="container mx-auto px-6 py-2">
             <div className="flex justify-between items-center">
               <div className="flex items-center">
