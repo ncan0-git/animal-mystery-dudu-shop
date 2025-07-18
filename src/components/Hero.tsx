@@ -40,8 +40,8 @@ export const Hero = () => {
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
-        <div className="w-full relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/35 to-transparent h-64"></div>
+        <div className="w-full relative border-b border-border">
+          <div className="absolute inset-0 bg-muted/80 h-24"></div>
           <div className="container mx-auto px-4 pt-8 pb-4 relative z-10">
             <div className="flex justify-between items-center">
               <img 
