@@ -32,8 +32,6 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: 'url(/lovable-uploads/399a7463-02ad-4a6b-b310-0750bbf87afa.png)'
     }} />
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-background/20" />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
@@ -69,7 +67,7 @@ export const Hero = () => {
                   thumbnailSrc="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png"
                   videoSrc="/path-to-your-video.mp4"
                   alt="DuDu Animal Party Characters"
-                  className="w-full max-w-sm lg:max-w-md"
+                  className="w-full max-w-xs lg:max-w-sm"
                 />
               </div>
               
