@@ -2,8 +2,38 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Gift, Sparkles, Star } from "lucide-react";
 import { VideoPlayer } from "./VideoPlayer";
+import { useState, useEffect } from "react";
 import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422a9.png";
 export const Hero = () => {
+  const backgroundImages = [
+    '/lovable-uploads/54826bb0-e6b6-47d1-8703-272feeea0c44.png',
+    '/lovable-uploads/c1087191-35da-46ed-a571-99cb99d2e4ef.png'
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Preload images
+  useEffect(() => {
+    backgroundImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  // Cycle through images every 30 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
+        setIsTransitioning(false);
+      }, 500); // Half second for transition
+    }, 30000); // 30 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToAnimals = () => {
     document.getElementById('products')?.scrollIntoView({
       behavior: 'smooth'
@@ -27,11 +57,25 @@ export const Hero = () => {
   const goToProduct = () => {
     window.location.href = '/product';
   };
-  return <section className="min-h-[75vh] bg-gradient-hero relative shadow-lg">
-      {/* Background image with blur */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url(/lovable-uploads/cd9ee33e-81e1-4f4c-9f33-adc90ec503f6.png)'
-    }} />
+  return <section className="min-h-[75vh] bg-gradient-hero relative shadow-lg overflow-hidden">
+      {/* Background images with slide transition */}
+      <div className="absolute inset-0">
+        {backgroundImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 ease-in-out ${
+              index === currentImageIndex 
+                ? 'transform translate-x-0' 
+                : index === (currentImageIndex - 1 + backgroundImages.length) % backgroundImages.length
+                ? 'transform -translate-x-full'
+                : 'transform translate-x-full'
+            }`}
+            style={{
+              backgroundImage: `url(${image})`
+            }}
+          />
+        ))}
+      </div>
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
