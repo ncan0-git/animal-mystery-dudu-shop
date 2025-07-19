@@ -3,7 +3,26 @@ import { Card } from "@/components/ui/card";
 import { Gift, Sparkles, Star } from "lucide-react";
 import { VideoPlayer } from "./VideoPlayer";
 import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422a9.png";
+import { useState, useEffect } from "react";
 export const Hero = () => {
+  const backgroundImages = [
+    '/lovable-uploads/d55c8168-4595-454a-93c8-00c4cb778a79.png',
+    '/lovable-uploads/1bfa77ec-5f71-4826-83ac-ea7bc94f3018.png',
+    '/lovable-uploads/8c6a013c-ff8d-4013-b5d1-161c8fa7f971.png'
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
   const scrollToAnimals = () => {
     document.getElementById('products')?.scrollIntoView({
       behavior: 'smooth'
@@ -29,9 +48,12 @@ export const Hero = () => {
   };
   return <section className="min-h-[75vh] bg-gradient-hero relative shadow-lg">
       {/* Background image with blur */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url(/lovable-uploads/cd9ee33e-81e1-4f4c-9f33-adc90ec503f6.png)'
-    }} />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out" 
+        style={{
+          backgroundImage: `url(${backgroundImages[currentImageIndex]})`
+        }} 
+      />
       {/* Content overlay */}
       <div className="relative z-10">
         {/* Header with Logo */}
@@ -81,7 +103,7 @@ export const Hero = () => {
                   Get Your Mystery Box
                 </Button>
                 
-                <Button variant="outline" size="lg" className="border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg transition-all duration-300" onClick={scrollToAnimals}>
+                <Button size="lg" className="bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg shadow-card hover:shadow-hover transition-all duration-300" onClick={scrollToAnimals}>
                   <Star className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
                   Meet the Animals
                 </Button>
