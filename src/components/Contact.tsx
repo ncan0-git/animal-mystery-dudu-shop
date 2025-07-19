@@ -13,28 +13,48 @@ export const Contact = () => {
     email: "",
     message: ""
   });
+  
+  const [status, setStatus] = useState(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
+    setStatus('sending');
+
+    try {
+      const response = await fetch('http://18.217.40.10:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        toast({
+          title: "Message Sent! 📧",
+          description: "Thank you for contacting us. We'll get back to you within 24 hours!",
+        });
+      } else {
+        setStatus('error');
+        toast({
+          title: "Error sending message",
+          description: "Please try again later.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
       toast({
-        title: "Please fill in all fields",
-        description: "All fields are required to send your message.",
+        title: "Error sending message",
+        description: "Please try again later.",
         variant: "destructive"
       });
-      return;
     }
-
-    // Simulate form submission
-    toast({
-      title: "Message Sent! 📧",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours!",
-    });
-
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
