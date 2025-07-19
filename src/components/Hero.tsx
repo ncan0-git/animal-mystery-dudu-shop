@@ -18,7 +18,7 @@ export const Hero = () => {
       setCurrentImageIndex((prevIndex) => 
         (prevIndex + 1) % backgroundImages.length
       );
-    }, 4000); // Change image every 4 seconds
+    }, 30000); // Change image every 30 seconds
 
     return () => clearInterval(interval);
   }, [backgroundImages.length]);
@@ -49,7 +49,7 @@ export const Hero = () => {
   return <section className="min-h-[75vh] bg-gradient-hero relative shadow-lg">
       {/* Background image with blur */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out" 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slide-in-right" 
         style={{
           backgroundImage: `url(${backgroundImages[currentImageIndex]})`
         }} 
