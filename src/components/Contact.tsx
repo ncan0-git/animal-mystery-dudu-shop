@@ -29,9 +29,13 @@ export const Contact = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
+      
       const data = await response.json();
+      console.log('Response data:', data);
 
-      if (data.success) {
+      if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
         toast({
