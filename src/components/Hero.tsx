@@ -30,7 +30,7 @@ export const Hero = () => {
   return <section className="min-h-[75vh] bg-gradient-hero relative shadow-lg">
       {/* Background image with blur */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url(/lovable-uploads/399a7463-02ad-4a6b-b310-0750bbf87afa.png)'
+      backgroundImage: 'url(/lovable-uploads/23de0c60-9272-4dff-b162-8d8702e6138f.png)'
     }} />
       {/* Content overlay */}
       <div className="relative z-10">
