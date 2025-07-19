@@ -21,7 +21,7 @@ export const Contact = () => {
     setStatus('sending');
 
     try {
-      const response = await fetch('http://18.217.40.10:3001/api/contact', {
+      const response = await fetch('https://18.217.40.10:3001/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
