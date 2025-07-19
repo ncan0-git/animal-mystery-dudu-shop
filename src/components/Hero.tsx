@@ -125,7 +125,7 @@ export const Hero = () => {
                   Get Your Mystery Box
                 </Button>
                 
-                <Button variant="outline" size="lg" className="border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg transition-all duration-300" onClick={scrollToAnimals}>
+                <Button variant="outline" size="lg" className="border-primary-green text-primary-green hover:bg-primary-green hover:text-black-cat px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg transition-all duration-300" onClick={scrollToAnimals}>
                   <Star className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
                   Meet the Animals
                 </Button>
