@@ -111,7 +111,7 @@ export const Hero = () => {
                   thumbnailSrc="/lovable-uploads/c7749d54-7bab-40f5-9cf4-0f1450486f89.png"
                   videoSrc="/path-to-your-video.mp4"
                   alt="DuDu Animal Party Characters"
-                  className="w-full max-w-sm lg:max-w-md"
+                  className="w-full max-w-xs lg:max-w-sm"
                 />
               </div>
               
