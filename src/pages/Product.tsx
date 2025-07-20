@@ -119,13 +119,13 @@ const Product = () => {
             <nav className="flex items-center gap-8">
               <button 
                 onClick={scrollToProducts}
-                className="text-foreground/70 hover:text-green-900 transition-colors duration-300 font-medium text-sm lg:text-base"
+                className="text-foreground/70 hover:text-green-700 transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 Products
               </button>
               <button 
                 onClick={scrollToContact}
-                className="text-foreground/70 hover:text-green-900 transition-colors duration-300 font-medium text-sm lg:text-base"
+                className="text-foreground/70 hover:text-green-700 transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 Contact Us
               </button>
@@ -257,7 +257,14 @@ const Product = () => {
             {/* PayPal Purchase Button */}
             <div className="space-y-4">
               <div className="flex justify-center">
-                <div id="paypal-container-VLPJD3ALY3AD4" className="w-full max-w-md"></div>
+                <div>
+                  <style>{`.pp-VLPJD3ALY3AD4{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}`}</style>
+                  <form action="https://www.paypal.com/ncp/payment/VLPJD3ALY3AD4" method="post" target="_blank" style={{display:"inline-grid",justifyItems:"center",alignContent:"start",gap:"0.5rem"}}>
+                    <input className="pp-VLPJD3ALY3AD4" type="submit" value="Buy Now" />
+                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+                    <section style={{fontSize: "0.75rem"}}> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style={{height:"0.875rem",verticalAlign:"middle"}}/></section>
+                  </form>
+                </div>
               </div>
             </div>
 
