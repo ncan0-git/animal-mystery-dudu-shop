@@ -66,8 +66,6 @@ export const Hero = () => {
             className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 ease-in-out ${
               index === currentImageIndex 
                 ? 'transform translate-x-0' 
-                : index === (currentImageIndex - 1 + backgroundImages.length) % backgroundImages.length
-                ? 'transform -translate-x-full'
                 : 'transform translate-x-full'
             }`}
             style={{

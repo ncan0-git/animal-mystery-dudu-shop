@@ -19,8 +19,8 @@ const Product = () => {
       const paypal = (window as any).paypal;
       if (paypal && paypal.HostedButtons) {
         paypal.HostedButtons({
-          hostedButtonId: "WR5BQTQSAJ7XC"
-        }).render("#paypal-container-WR5BQTQSAJ7XC");
+          hostedButtonId: "VLPJD3ALY3AD4"
+        }).render("#paypal-container-VLPJD3ALY3AD4");
       }
     };
 
@@ -107,7 +107,7 @@ const Product = () => {
     <div className="min-h-screen bg-background">
       {/* Header with Logo */}
       <header className="w-full relative bg-background shadow-lg border-b border-border/20">
-        <div className="container mx-auto px-4 sm:px-6 py-2">
+        <div className="container mx-auto px-6 py-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
               <img 
@@ -116,16 +116,16 @@ const Product = () => {
                 className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm"
               />
             </div>
-            <nav className="flex items-center gap-2 sm:gap-4 lg:gap-8">
+            <nav className="flex items-center gap-8">
               <button 
                 onClick={scrollToProducts}
-                className="hidden sm:block text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 Products
               </button>
               <button 
                 onClick={scrollToContact}
-                className="hidden sm:block text-foreground/70 hover:text-primary-green-dark transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary-green-dark after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 Contact Us
               </button>
@@ -193,7 +193,7 @@ const Product = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Badge className="bg-orange-fox text-white">Mystery Box</Badge>
-                <Badge variant="outline" className="border-green-frog text-green-frog">
+                <Badge variant="outline" className="border-blue-900 text-blue-900">
                   Limited Edition
                 </Badge>
               </div>
@@ -256,7 +256,9 @@ const Product = () => {
 
             {/* PayPal Purchase Button */}
             <div className="space-y-4">
-              <div id="paypal-container-WR5BQTQSAJ7XC" className="w-full"></div>
+              <div className="flex justify-center">
+                <div id="paypal-container-VLPJD3ALY3AD4" className="w-full max-w-md"></div>
+              </div>
             </div>
 
             {/* Features */}

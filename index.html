@@ -28,5 +28,15 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        if (window.paypal && window.paypal.HostedButtons) {
+          paypal.HostedButtons({
+            hostedButtonId: "VLPJD3ALY3AD4"
+          }).render("#paypal-container-VLPJD3ALY3AD4");
+        }
+      });
+    </script>
   </body>
 </html>
