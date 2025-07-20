@@ -3,11 +3,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageCircle, Phone, Send } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
+import Altcha from "@/components/ui/altcha";
 
 export const Contact = () => {
   const { toast } = useToast();
+  const altchaRef = useRef<{ value: string | null }>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,6 +20,17 @@ export const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if ALTCHA is verified
+    if (!altchaRef.current?.value) {
+      toast({
+        title: "Verification Required",
+        description: "Please complete the verification challenge before submitting.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setStatus('sending');
 
     try {
@@ -26,7 +39,10 @@ export const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          altcha: altchaRef.current.value
+        }),
       });
 
       console.log('Response status:', response.status);
@@ -143,6 +159,13 @@ export const Contact = () => {
                     className="w-full min-h-32"
                     rows={4}
                   />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Security Verification
+                  </label>
+                  <Altcha ref={altchaRef} />
                 </div>
 
                 <Button 
