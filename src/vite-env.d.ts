@@ -13,6 +13,21 @@ declare global {
     requestChallenge(): void;
   }
 
+  // PayPal SDK types
+  interface PayPalHostedButtons {
+    hostedButtonId: string;
+  }
+
+  interface PayPalSDK {
+    HostedButtons: (config: PayPalHostedButtons) => {
+      render: (selector: string) => void;
+    };
+  }
+
+  interface Window {
+    paypal?: PayPalSDK;
+  }
+
   namespace JSX {
     interface IntrinsicElements {
       'altcha-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & AltchaWidget, HTMLElement>;

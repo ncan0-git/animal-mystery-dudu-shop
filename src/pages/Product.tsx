@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +12,33 @@ const Product = () => {
   const { toast } = useToast();
   const [quantity, setQuantity] = useState(1);
   const price = 20;
+
+  useEffect(() => {
+    // Initialize PayPal hosted button when component mounts
+    const initPayPal = () => {
+      const paypal = (window as any).paypal;
+      if (paypal && paypal.HostedButtons) {
+        paypal.HostedButtons({
+          hostedButtonId: "WR5BQTQSAJ7XC"
+        }).render("#paypal-container-WR5BQTQSAJ7XC");
+      }
+    };
+
+    // Check if PayPal SDK is already loaded
+    if ((window as any).paypal) {
+      initPayPal();
+    } else {
+      // Wait for PayPal SDK to load
+      const checkPayPal = setInterval(() => {
+        if ((window as any).paypal) {
+          initPayPal();
+          clearInterval(checkPayPal);
+        }
+      }, 100);
+
+      return () => clearInterval(checkPayPal);
+    }
+  }, []);
 
   const productImages = [
     "/lovable-uploads/c13b008c-5519-4157-8fca-89433ff9c5d5.png",
@@ -227,26 +254,9 @@ const Product = () => {
               </div>
             </div>
 
-            {/* Purchase Button */}
+            {/* PayPal Purchase Button */}
             <div className="space-y-4">
-              <Button 
-                size="lg" 
-                className="w-full bg-primary-green hover:bg-primary-green-dark text-black-cat font-semibold py-6 text-lg shadow-card hover:shadow-hover transition-all duration-300"
-                onClick={handlePurchase}
-              >
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Add to Cart
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="w-full border-primary-green-dark text-primary-green-dark hover:bg-primary-green hover:text-black-cat py-6 text-lg transition-all duration-300"
-                onClick={handleBuyNow}
-              >
-                <Gift className="w-5 h-5 mr-2" />
-                Buy Now
-              </Button>
+              <div id="paypal-container-WR5BQTQSAJ7XC" className="w-full"></div>
             </div>
 
             {/* Features */}
