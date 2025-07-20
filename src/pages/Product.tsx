@@ -194,7 +194,7 @@ const Product = () => {
 
             {/* PayPal Purchase Button */}
             <div className="space-y-4">
-              <div className="flex justify-center">
+              <div className="flex justify-start">
                 <div>
                   <style>{`.pp-VLPJD3ALY3AD4{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}`}</style>
                   <form action="https://www.paypal.com/ncp/payment/VLPJD3ALY3AD4" method="post" target="_blank" style={{
