@@ -201,7 +201,7 @@ const Product = () => {
                   display: "inline-grid",
                   justifyItems: "center",
                   alignContent: "start",
-                  gap: "0"
+                  gap: "0.5rem"
                 }}>
                     <input className="pp-VLPJD3ALY3AD4" type="submit" value="Buy Now" />
                     <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
