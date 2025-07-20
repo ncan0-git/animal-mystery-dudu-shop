@@ -24,11 +24,7 @@ export const Hero = () => {
   // Cycle through images every 30 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
-        setIsTransitioning(false);
-      }, 500); // Half second for transition
+      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
     }, 30000); // 30 seconds
 
     return () => clearInterval(interval);
@@ -59,20 +55,23 @@ export const Hero = () => {
   };
   return <section className="min-h-[75vh] bg-gradient-hero relative shadow-lg overflow-hidden">
       {/* Background images with slide transition */}
-      <div className="absolute inset-0">
-        {backgroundImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 ease-in-out ${
-              index === currentImageIndex 
-                ? 'transform translate-x-0' 
-                : 'transform translate-x-full'
-            }`}
-            style={{
-              backgroundImage: `url(${image})`
-            }}
-          />
-        ))}
+      <div className="absolute inset-0 overflow-hidden">
+        <div 
+          className="flex w-[200%] h-full transition-transform duration-1000 ease-in-out"
+          style={{
+            transform: `translateX(-${currentImageIndex * 50}%)`
+          }}
+        >
+          {backgroundImages.map((image, index) => (
+            <div
+              key={index}
+              className="w-1/2 h-full bg-cover bg-center bg-no-repeat flex-shrink-0"
+              style={{
+                backgroundImage: `url(${image})`
+              }}
+            />
+          ))}
+        </div>
       </div>
       {/* Content overlay */}
       <div className="relative z-10">
@@ -84,10 +83,10 @@ export const Hero = () => {
                 <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm" />
               </div>
               <nav className="flex items-center gap-8">
-                <button onClick={scrollToProducts} className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base">
+                <button onClick={scrollToProducts} className="text-foreground/70 hover:text-green-900 transition-colors duration-300 font-medium text-sm lg:text-base">
                   Products
                 </button>
-                <button onClick={scrollToContact} className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base">
+                <button onClick={scrollToContact} className="text-foreground/70 hover:text-green-900 transition-colors duration-300 font-medium text-sm lg:text-base">
                   Contact Us
                 </button>
               </nav>

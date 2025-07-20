@@ -119,13 +119,13 @@ const Product = () => {
             <nav className="flex items-center gap-8">
               <button 
                 onClick={scrollToProducts}
-                className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base"
+                className="text-foreground/70 hover:text-green-900 transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 Products
               </button>
               <button 
                 onClick={scrollToContact}
-                className="text-foreground/70 hover:text-primary-green-dark transition-colors duration-300 font-medium text-sm lg:text-base"
+                className="text-foreground/70 hover:text-green-900 transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 Contact Us
               </button>
