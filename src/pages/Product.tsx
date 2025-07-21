@@ -6,13 +6,13 @@ import { Star, Heart, Shield, Truck, Gift, ArrowLeft, ShoppingCart } from "lucid
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { Footer } from "@/components/Footer";
-
 const Product = () => {
   const navigate = useNavigate();
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [quantity, setQuantity] = useState(1);
   const price = 20;
-
   useEffect(() => {
     // Initialize PayPal hosted button when component mounts
     const initPayPal = () => {
@@ -35,20 +35,11 @@ const Product = () => {
           clearInterval(checkPayPal);
         }
       }, 100);
-
       return () => clearInterval(checkPayPal);
     }
   }, []);
-
-  const productImages = [
-    "/lovable-uploads/c13b008c-5519-4157-8fca-89433ff9c5d5.png",
-    "/lovable-uploads/a30870f6-f983-44f9-8476-3cbcea895534.png",
-    "/lovable-uploads/b14f9f5d-c73c-440d-b5e3-e7926411ae74.png", 
-    "/lovable-uploads/6ff44741-be38-4e0b-9605-316f7a60bd82.png"
-  ];
-
+  const productImages = ["/lovable-uploads/c13b008c-5519-4157-8fca-89433ff9c5d5.png", "/lovable-uploads/a30870f6-f983-44f9-8476-3cbcea895534.png", "/lovable-uploads/b14f9f5d-c73c-440d-b5e3-e7926411ae74.png", "/lovable-uploads/6ff44741-be38-4e0b-9605-316f7a60bd82.png"];
   const [selectedImage, setSelectedImage] = useState(0);
-
   const handlePurchase = () => {
     // Save cart items to localStorage
     const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
@@ -59,10 +50,9 @@ const Product = () => {
       quantity: quantity,
       image: productImages[0]
     };
-    
+
     // Check if item already exists in cart
     const existingItemIndex = existingCart.findIndex((item: any) => item.id === newItem.id);
-    
     if (existingItemIndex > -1) {
       // Update quantity if item exists
       existingCart[existingItemIndex].quantity += quantity;
@@ -70,70 +60,50 @@ const Product = () => {
       // Add new item to cart
       existingCart.push(newItem);
     }
-    
     localStorage.setItem('cart', JSON.stringify(existingCart));
-    
+
     // Show success toast
     toast({
       title: "Added to Cart! 🎉",
-      description: `${quantity} DuDu Mystery Box${quantity > 1 ? 'es' : ''} added to your cart`,
+      description: `${quantity} DuDu Mystery Box${quantity > 1 ? 'es' : ''} added to your cart`
     });
   };
-
   const handleBuyNow = () => {
     handlePurchase();
     // For now, just redirect to the same page or could redirect to a checkout page
     toast({
       title: "Redirecting to Checkout...",
-      description: "Taking you to secure payment",
+      description: "Taking you to secure payment"
     });
   };
-
   const scrollToProducts = () => {
     navigate('/');
     setTimeout(() => {
-      document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('products')?.scrollIntoView({
+        behavior: 'smooth'
+      });
     }, 100);
   };
-
   const scrollToContact = () => {
     navigate('/');
     setTimeout(() => {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('contact')?.scrollIntoView({
+        behavior: 'smooth'
+      });
     }, 100);
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Header with Logo */}
       <header className="w-full relative bg-background shadow-lg border-b border-border/20">
         <div className="container mx-auto px-6 py-2">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" 
-                alt="DuDu Animal Party Logo" 
-                className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm"
-              />
+              <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm" />
             </div>
             <nav className="flex items-center gap-8">
-              <button 
-                onClick={scrollToProducts}
-                className="text-foreground/70 hover:text-green-700 transition-colors duration-300 font-medium text-sm lg:text-base"
-              >
-                Products
-              </button>
-              <button 
-                onClick={scrollToContact}
-                className="text-foreground/70 hover:text-green-700 transition-colors duration-300 font-medium text-sm lg:text-base"
-              >
-                Contact Us
-              </button>
-              <Button 
-                variant="ghost" 
-                onClick={() => navigate('/')}
-                className="hover:bg-primary-green/10 text-xs sm:text-sm px-2 sm:px-4"
-              >
+              
+              
+              <Button variant="ghost" onClick={() => navigate('/')} className="hover:bg-primary-green/10 text-xs sm:text-sm px-2 sm:px-4">
                 <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                 <span className="hidden xs:inline">Back to </span>Home
               </Button>
@@ -149,11 +119,7 @@ const Product = () => {
           <div className="space-y-6">
             {/* Main Image */}
             <div className="relative bg-white rounded-3xl p-8 shadow-card">
-              <img
-                src={productImages[selectedImage]}
-                alt="DuDu Animal Party Mystery Box"
-                className="w-full h-auto rounded-2xl object-contain max-h-96"
-              />
+              <img src={productImages[selectedImage]} alt="DuDu Animal Party Mystery Box" className="w-full h-auto rounded-2xl object-contain max-h-96" />
               <div className="absolute top-4 right-4">
                 <Heart className="w-8 h-8 text-gray-300 hover:text-pink-bunny cursor-pointer transition-colors" />
               </div>
@@ -161,28 +127,12 @@ const Product = () => {
 
             {/* Thumbnail Gallery */}
             <div className="grid grid-cols-4 gap-4">
-              {productImages.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={`relative rounded-xl overflow-hidden transition-all duration-300 ${
-                    selectedImage === index
-                      ? "ring-4 ring-primary-green scale-105 shadow-lg"
-                      : "hover:scale-105 hover:shadow-md"
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`Product view ${index + 1}`}
-                    className="w-full h-20 object-cover bg-white"
-                  />
-                  {selectedImage === index && (
-                    <div className="absolute inset-0 bg-primary-green/20 flex items-center justify-center">
+              {productImages.map((image, index) => <button key={index} onClick={() => setSelectedImage(index)} className={`relative rounded-xl overflow-hidden transition-all duration-300 ${selectedImage === index ? "ring-4 ring-primary-green scale-105 shadow-lg" : "hover:scale-105 hover:shadow-md"}`}>
+                  <img src={image} alt={`Product view ${index + 1}`} className="w-full h-20 object-cover bg-white" />
+                  {selectedImage === index && <div className="absolute inset-0 bg-primary-green/20 flex items-center justify-center">
                       <span className="text-white font-bold">✓</span>
-                    </div>
-                  )}
-                </button>
-              ))}
+                    </div>}
+                </button>)}
             </div>
           </div>
 
@@ -213,9 +163,7 @@ const Product = () => {
             {/* Rating */}
             <div className="flex items-center gap-2">
               <div className="flex items-center">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-orange-fox text-orange-fox" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-orange-fox text-orange-fox" />)}
               </div>
               <span className="text-foreground/70">(128 reviews)</span>
             </div>
@@ -234,21 +182,11 @@ const Product = () => {
             <div className="space-y-3">
               <label className="text-lg font-semibold">Quantity</label>
               <div className="flex items-center gap-4">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="w-10 h-10"
-                >
+                <Button variant="outline" size="sm" onClick={() => setQuantity(Math.max(1, quantity - 1))} className="w-10 h-10">
                   -
                 </Button>
                 <span className="text-xl font-semibold w-12 text-center">{quantity}</span>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setQuantity(quantity + 1)}
-                  className="w-10 h-10"
-                >
+                <Button variant="outline" size="sm" onClick={() => setQuantity(quantity + 1)} className="w-10 h-10">
                   +
                 </Button>
               </div>
@@ -259,10 +197,20 @@ const Product = () => {
               <div className="flex justify-center">
                 <div>
                   <style>{`.pp-VLPJD3ALY3AD4{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}`}</style>
-                  <form action="https://www.paypal.com/ncp/payment/VLPJD3ALY3AD4" method="post" target="_blank" style={{display:"inline-grid",justifyItems:"center",alignContent:"start",gap:"0.5rem"}}>
+                  <form action="https://www.paypal.com/ncp/payment/VLPJD3ALY3AD4" method="post" target="_blank" style={{
+                  display: "inline-grid",
+                  justifyItems: "center",
+                  alignContent: "start",
+                  gap: "0.5rem"
+                }}>
                     <input className="pp-VLPJD3ALY3AD4" type="submit" value="Buy Now" />
                     <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
-                    <section style={{fontSize: "0.75rem"}}> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style={{height:"0.875rem",verticalAlign:"middle"}}/></section>
+                    <section style={{
+                    fontSize: "0.75rem"
+                  }}> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style={{
+                      height: "0.875rem",
+                      verticalAlign: "middle"
+                    }} /></section>
                   </form>
                 </div>
               </div>
@@ -323,8 +271,6 @@ const Product = () => {
         </div>
       </div>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Product;
