@@ -53,7 +53,7 @@ export const Hero = () => {
   const goToProduct = () => {
     window.location.href = '/product';
   };
-  return <section className="min-h-[75vh] bg-gradient-hero relative shadow-lg overflow-hidden">
+  return <section className="min-h-[65vh] bg-gradient-hero relative shadow-lg overflow-hidden">
       {/* Background images with slide transition */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
@@ -83,10 +83,10 @@ export const Hero = () => {
                 <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm" />
               </div>
               <nav className="flex items-center gap-8">
-                <button onClick={scrollToProducts} className="text-foreground/70 hover:text-green-700 transition-colors duration-300 font-medium text-sm lg:text-base">
+                <button onClick={scrollToProducts} className="text-foreground/70 hover:text-primary-green transition-colors duration-300 font-medium text-sm lg:text-base">
                   Products
                 </button>
-                <button onClick={scrollToContact} className="text-foreground/70 hover:text-green-700 transition-colors duration-300 font-medium text-sm lg:text-base">
+                <button onClick={scrollToContact} className="text-foreground/70 hover:text-primary-green transition-colors duration-300 font-medium text-sm lg:text-base">
                   Contact Us
                 </button>
               </nav>
@@ -95,7 +95,7 @@ export const Hero = () => {
         </header>
 
         <div className="container mx-auto px-4 py-8 lg:py-12">
-          <div className="flex justify-center items-center min-h-[45vh]">
+          <div className="flex justify-center items-center min-h-[35vh]">
             
             {/* Combined content in white rectangle */}
             <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">

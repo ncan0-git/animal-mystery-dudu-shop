@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Star } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const animals = [
   {
@@ -70,6 +71,44 @@ const animals = [
 ];
 
 export const AnimalGrid = () => {
+  const [likedAnimals, setLikedAnimals] = useState<Set<string>>(new Set());
+
+  // Load liked animals from cookies on component mount
+  useEffect(() => {
+    const savedLikes = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('likedAnimals='))
+      ?.split('=')[1];
+    
+    if (savedLikes) {
+      try {
+        const parsedLikes = JSON.parse(decodeURIComponent(savedLikes));
+        setLikedAnimals(new Set(parsedLikes));
+      } catch (e) {
+        console.log('Error parsing liked animals from cookie:', e);
+      }
+    }
+  }, []);
+
+  // Save liked animals to cookies whenever the set changes
+  const updateLikedAnimals = (animalName: string) => {
+    setLikedAnimals(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(animalName)) {
+        newSet.delete(animalName);
+      } else {
+        newSet.add(animalName);
+      }
+      
+      // Save to cookie (expires in 1 year)
+      const expires = new Date();
+      expires.setFullYear(expires.getFullYear() + 1);
+      document.cookie = `likedAnimals=${encodeURIComponent(JSON.stringify(Array.from(newSet)))}; expires=${expires.toUTCString()}; path=/`;
+      
+      return newSet;
+    });
+  };
+
   return (
     <section id="animals" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
@@ -91,8 +130,9 @@ export const AnimalGrid = () => {
           {animals.map((animal, index) => (
             <Card 
               key={animal.name}
-              className={`group relative overflow-hidden border-2 ${animal.borderColor} bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 hover:scale-105 hover:-translate-y-2`}
+              className={`group relative overflow-hidden border-2 ${animal.borderColor} bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer`}
               style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => updateLikedAnimals(animal.name)}
             >
               <CardContent className="p-0">
                 {/* Animal Emoji */}
@@ -101,7 +141,13 @@ export const AnimalGrid = () => {
                     {animal.emoji}
                   </div>
                   <div className="absolute top-2 right-2">
-                    <Heart className="w-6 h-6 text-white/80 group-hover:text-red-500 group-hover:scale-125 transition-all duration-300" />
+                    <Heart 
+                      className={`w-6 h-6 group-hover:scale-125 transition-all duration-300 ${
+                        likedAnimals.has(animal.name) 
+                          ? 'text-red-500 fill-red-500' 
+                          : 'text-white/80 group-hover:text-red-500'
+                      }`} 
+                    />
                   </div>
                 </div>
 
