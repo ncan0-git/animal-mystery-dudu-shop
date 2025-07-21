@@ -182,7 +182,10 @@ const Product = () => {
             {/* PayPal Purchase Button */}
             <div className="space-y-4">
               <div className="flex justify-center">
-                <div id="paypal-container-VLPJD3ALY3AD4"></div>
+                <div 
+                  id="paypal-container-VLPJD3ALY3AD4"
+                  className="w-full max-w-sm"
+                ></div>
               </div>
             </div>
 

@@ -53,7 +53,7 @@ export const Hero = () => {
   const goToProduct = () => {
     window.location.href = '/product';
   };
-  return <section className="min-h-[65vh] bg-gradient-hero relative shadow-lg overflow-hidden">
+  return <section className="min-h-[55vh] bg-gradient-hero relative shadow-lg overflow-hidden">
       {/* Background images with slide transition */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
@@ -95,10 +95,10 @@ export const Hero = () => {
         </header>
 
         <div className="container mx-auto px-4 py-8 lg:py-12">
-          <div className="flex justify-center items-center min-h-[35vh]">
+          <div className="flex justify-center items-center min-h-[25vh]">
             
             {/* Combined content in white rectangle */}
-            <div className="text-center space-y-6 lg:space-y-8 relative py-6 px-8 max-w-4xl mx-auto">
+            <div className="text-center space-y-4 lg:space-y-6 relative py-4 px-6 max-w-4xl mx-auto">
               {/* Background rectangle */}
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-background/95 border border-border/50 rounded-2xl drop-shadow-lg -z-10"></div>
               
