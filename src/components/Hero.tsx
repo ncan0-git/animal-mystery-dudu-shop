@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import mysteryBoxImage from "/lovable-uploads/f9f9d6a3-856b-45a4-b956-007e7c3422a9.png";
 export const Hero = () => {
   const backgroundImages = [
-    '/lovable-uploads/c1087191-35da-46ed-a571-99cb99d2e4ef.png',
     '/lovable-uploads/54826bb0-e6b6-47d1-8703-272feeea0c44.png'
   ];
 

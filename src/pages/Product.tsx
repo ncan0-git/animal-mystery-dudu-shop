@@ -149,10 +149,10 @@ const Product = () => {
               </div>
               
                <h1 className="text-4xl lg:text-5xl font-bold">
-                <span className="text-primary-green">
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
                   DuDu Animal Party
                 </span>
-              </h1>
+               </h1>
               
               <p className="text-xl text-foreground/70 leading-relaxed">
                 Discover the magic of surprise with our adorable mystery box! 
