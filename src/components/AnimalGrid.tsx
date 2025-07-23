@@ -2,84 +2,69 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Star } from "lucide-react";
 import { useState, useEffect } from "react";
-
-const animals = [
-  {
-    name: "Pink Bunny",
-    emoji: "🐰",
-    color: "bg-pink-bunny",
-    borderColor: "border-pink-bunny-dark",
-    description: "Soft and cuddly with the sweetest smile",
-    personality: "Gentle & Caring"
-  },
-  {
-    name: "White Panda",
-    emoji: "🐼",
-    color: "bg-white-panda",
-    borderColor: "border-white-panda-dark",
-    description: "Wise and peaceful bamboo lover",
-    personality: "Calm & Wise"
-  },
-  {
-    name: "Green Frog",
-    emoji: "🐸",
-    color: "bg-green-frog",
-    borderColor: "border-green-frog-dark",
-    description: "Energetic hopper with a big heart",
-    personality: "Energetic & Fun"
-  },
-  {
-    name: "Blue Elephant",
-    emoji: "🐘",
-    color: "bg-blue-elephant",
-    borderColor: "border-blue-elephant-dark",
-    description: "Never forgets a friend or a hug",
-    personality: "Loyal & Strong"
-  },
-  {
-    name: "Orange Fox",
-    emoji: "🦊",
-    color: "bg-orange-fox",
-    borderColor: "border-orange-fox-dark",
-    description: "Clever and quick with endless curiosity",
-    personality: "Smart & Playful"
-  },
-  {
-    name: "Black Cat",
-    emoji: "🐱",
-    color: "bg-black-cat",
-    borderColor: "border-black-cat-light",
-    description: "Mysterious and elegant night wanderer",
-    personality: "Mysterious & Elegant"
-  },
-  {
-    name: "Brown Bear",
-    emoji: "🐻",
-    color: "bg-brown-bear",
-    borderColor: "border-brown-bear-dark",
-    description: "Big hugs and even bigger heart",
-    personality: "Warm & Protective"
-  },
-  {
-    name: "Mystery Friend",
-    emoji: "❓",
-    color: "bg-gradient-to-br from-purple-400 to-pink-400",
-    borderColor: "border-purple-400",
-    description: "Who knows what surprise awaits you?",
-    personality: "??? & ???"
-  }
-];
-
+const animals = [{
+  name: "Pink Bunny",
+  emoji: "🐰",
+  color: "bg-pink-bunny",
+  borderColor: "border-pink-bunny-dark",
+  description: "Soft and cuddly with the sweetest smile",
+  personality: "Gentle & Caring"
+}, {
+  name: "White Panda",
+  emoji: "🐼",
+  color: "bg-white-panda",
+  borderColor: "border-white-panda-dark",
+  description: "Wise and peaceful bamboo lover",
+  personality: "Calm & Wise"
+}, {
+  name: "Green Frog",
+  emoji: "🐸",
+  color: "bg-green-frog",
+  borderColor: "border-green-frog-dark",
+  description: "Energetic hopper with a big heart",
+  personality: "Energetic & Fun"
+}, {
+  name: "Blue Elephant",
+  emoji: "🐘",
+  color: "bg-blue-elephant",
+  borderColor: "border-blue-elephant-dark",
+  description: "Never forgets a friend or a hug",
+  personality: "Loyal & Strong"
+}, {
+  name: "Orange Fox",
+  emoji: "🦊",
+  color: "bg-orange-fox",
+  borderColor: "border-orange-fox-dark",
+  description: "Clever and quick with endless curiosity",
+  personality: "Smart & Playful"
+}, {
+  name: "Black Cat",
+  emoji: "🐱",
+  color: "bg-black-cat",
+  borderColor: "border-black-cat-light",
+  description: "Mysterious and elegant night wanderer",
+  personality: "Mysterious & Elegant"
+}, {
+  name: "Brown Bear",
+  emoji: "🐻",
+  color: "bg-brown-bear",
+  borderColor: "border-brown-bear-dark",
+  description: "Big hugs and even bigger heart",
+  personality: "Warm & Protective"
+}, {
+  name: "Mystery Friend",
+  emoji: "❓",
+  color: "bg-gradient-to-br from-purple-400 to-pink-400",
+  borderColor: "border-purple-400",
+  description: "Who knows what surprise awaits you?",
+  personality: "??? & ???"
+}];
 export const AnimalGrid = () => {
   const [likedAnimals, setLikedAnimals] = useState<Set<string>>(new Set());
 
   // Load liked animals from cookies on component mount
   useEffect(() => {
-    const savedLikes = document.cookie
-      .split('; ')
-      .find(row => row.startsWith('likedAnimals='))
-      ?.split('=')[1];
-    
+    const savedLikes = document.cookie.split('; ').find(row => row.startsWith('likedAnimals='))?.split('=')[1];
     if (savedLikes) {
       try {
         const parsedLikes = JSON.parse(decodeURIComponent(savedLikes));
@@ -99,18 +84,15 @@ export const AnimalGrid = () => {
       } else {
         newSet.add(animalName);
       }
-      
+
       // Save to cookie (expires in 1 year)
       const expires = new Date();
       expires.setFullYear(expires.getFullYear() + 1);
       document.cookie = `likedAnimals=${encodeURIComponent(JSON.stringify(Array.from(newSet)))}; expires=${expires.toUTCString()}; path=/`;
-      
       return newSet;
     });
   };
-
-  return (
-    <section id="animals" className="py-20 px-4 bg-background">
+  return <section id="animals" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           
@@ -127,13 +109,9 @@ export const AnimalGrid = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {animals.map((animal, index) => (
-            <Card 
-              key={animal.name}
-              className={`group relative overflow-hidden border-2 ${animal.borderColor} bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer`}
-              style={{ animationDelay: `${index * 100}ms` }}
-              onClick={() => updateLikedAnimals(animal.name)}
-            >
+          {animals.map((animal, index) => <Card key={animal.name} className={`group relative overflow-hidden border-2 ${animal.borderColor} bg-gradient-card shadow-card hover:shadow-hover transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer`} style={{
+          animationDelay: `${index * 100}ms`
+        }} onClick={() => updateLikedAnimals(animal.name)}>
               <CardContent className="p-0">
                 {/* Animal Emoji */}
                 <div className={`relative ${animal.color} p-8 flex items-center justify-center`}>
@@ -141,13 +119,7 @@ export const AnimalGrid = () => {
                     {animal.emoji}
                   </div>
                   <div className="absolute top-2 right-2">
-                    <Heart 
-                      className={`w-6 h-6 group-hover:scale-125 transition-all duration-300 ${
-                        likedAnimals.has(animal.name) 
-                          ? 'text-red-500 fill-red-500' 
-                          : 'text-white/80 group-hover:text-red-500'
-                      }`} 
-                    />
+                    <Heart className={`w-6 h-6 group-hover:scale-125 transition-all duration-300 ${likedAnimals.has(animal.name) ? 'text-red-500 fill-red-500' : 'text-white/80 group-hover:text-red-500'}`} />
                   </div>
                 </div>
 
@@ -157,10 +129,7 @@ export const AnimalGrid = () => {
                     {animal.name}
                   </h3>
                   
-                  <Badge 
-                    variant="outline" 
-                    className="w-full justify-center py-1 text-sm border-current"
-                  >
+                  <Badge variant="outline" className="w-full justify-center py-1 text-sm border-current">
                     {animal.personality}
                   </Badge>
                   
@@ -172,20 +141,10 @@ export const AnimalGrid = () => {
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"></div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-card rounded-full shadow-soft">
-            <Star className="w-5 h-5 text-orange-fox" />
-            <span className="text-lg font-semibold text-foreground">
-              Which friend will you get? It's a surprise! 🎁
-            </span>
-            <Star className="w-5 h-5 text-orange-fox" />
-          </div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
