@@ -76,16 +76,16 @@ export const Hero = () => {
       <div className="relative z-10">
         {/* Header with Logo */}
         <header className="w-full relative bg-background shadow-lg border-b border-border/20">
-          <div className="container mx-auto px-6 py-2">
+          <div className="container mx-auto px-4 py-1.5">
             <div className="flex justify-between items-center">
               <div className="flex items-center">
-                <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm" />
+                <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-6 sm:h-8 lg:h-10 w-auto drop-shadow-sm" />
               </div>
-              <nav className="flex items-center gap-8">
-                <button onClick={scrollToProducts} className="text-foreground/70 hover:text-primary-green transition-colors duration-300 font-medium text-sm lg:text-base">
+              <nav className="flex items-center gap-6">
+                <button onClick={scrollToProducts} className="text-foreground/70 hover:bg-primary-green/10 hover:text-primary-green transition-all duration-300 font-medium text-xs lg:text-sm px-2 py-1 rounded">
                   Products
                 </button>
-                <button onClick={scrollToContact} className="text-foreground/70 hover:text-primary-green transition-colors duration-300 font-medium text-sm lg:text-base">
+                <button onClick={scrollToContact} className="text-foreground/70 hover:bg-primary-green/10 hover:text-primary-green transition-all duration-300 font-medium text-xs lg:text-sm px-2 py-1 rounded">
                   Contact Us
                 </button>
               </nav>
