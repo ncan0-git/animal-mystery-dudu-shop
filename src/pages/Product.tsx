@@ -148,8 +148,8 @@ const Product = () => {
                 </Badge>
               </div>
               
-              <h1 className="text-4xl lg:text-5xl font-bold">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
+               <h1 className="text-4xl lg:text-5xl font-bold">
+                <span className="text-primary-green">
                   DuDu Animal Party
                 </span>
               </h1>
@@ -160,31 +160,31 @@ const Product = () => {
               </p>
             </div>
 
-            {/* Rating */}
-            <div className="flex items-center gap-2">
-              <div className="flex items-center">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-orange-fox text-orange-fox" />)}
-              </div>
-              <span className="text-foreground/70">(128 reviews)</span>
-            </div>
-
-            {/* Price */}
-            <div className="space-y-2">
-              <div className="flex items-baseline gap-4">
-                <span className="text-4xl font-bold text-primary-green">${price}</span>
-                <span className="text-lg text-foreground/50 line-through">$29.99</span>
-                <Badge className="bg-red-500 text-white">33% OFF</Badge>
-              </div>
-              <p className="text-sm text-foreground/60">Free shipping included!</p>
-            </div>
-
-
-            {/* PayPal Purchase Button */}
+            {/* PayPal Purchase Button with Rating and Price */}
             <div className="space-y-4">
-              <div className="flex justify-center">
+              <div className="max-w-sm">
+                {/* Rating */}
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-orange-fox text-orange-fox" />)}
+                  </div>
+                  <span className="text-foreground/70">(128 reviews)</span>
+                </div>
+
+                {/* Price */}
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-baseline gap-4">
+                    <span className="text-4xl font-bold text-primary-green">${price}</span>
+                    <span className="text-lg text-foreground/50 line-through">$29.99</span>
+                    <Badge className="bg-red-500 text-white">33% OFF</Badge>
+                  </div>
+                  <p className="text-sm text-foreground/60">Free shipping included!</p>
+                </div>
+
+                {/* PayPal Button */}
                 <div 
                   id="paypal-container-VLPJD3ALY3AD4"
-                  className="w-full max-w-sm"
+                  className="w-full"
                 ></div>
               </div>
             </div>
