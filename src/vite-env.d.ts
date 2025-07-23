@@ -30,10 +30,7 @@ declare global {
 
   namespace JSX {
     interface IntrinsicElements {
-      'altcha': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & {
-        name?: string;
-        sitekey?: string;
-      }, HTMLElement>;
+      'altcha-widget': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & AltchaWidget, HTMLElement>;
     }
   }
 }

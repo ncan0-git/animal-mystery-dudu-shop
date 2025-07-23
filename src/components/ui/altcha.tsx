@@ -1,22 +1,23 @@
 import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from 'react'
 
+// Importing altcha package will introduce a new element <altcha-widget>
+import 'altcha'
+
 interface AltchaProps {
   onStateChange?: (ev: Event | CustomEvent) => void
 }
 
 const Altcha = forwardRef<{ value: string | null }, AltchaProps>(({ onStateChange }, ref) => {
-  const widgetRef = useRef<HTMLElement>(null)
+  const widgetRef = useRef<AltchaWidget & AltchaWidgetMethods & HTMLElement>(null)
   const [value, setValue] = useState<string | null>(null)
 
   useImperativeHandle(ref, () => {
     return {
       get value() {
-        // Get the token from the hidden input field that ALTCHA creates
-        const input = document.querySelector('input[name="altcha"]') as HTMLInputElement
-        return input?.value || null
+        return value
       }
     }
-  }, [])
+  }, [value])
 
   useEffect(() => {
     const handleStateChange = (ev: Event | CustomEvent) => {
@@ -35,14 +36,14 @@ const Altcha = forwardRef<{ value: string | null }, AltchaProps>(({ onStateChang
   }, [onStateChange])
 
   return (
-    <altcha
+    <altcha-widget
       ref={widgetRef}
-      name="altcha"
-      sitekey="your-site-key"
       style={{
         '--altcha-max-width': '100%',
       }}
-    ></altcha>
+      debug
+      test
+    ></altcha-widget>
   )
 })
 
