@@ -82,10 +82,10 @@ export const Hero = () => {
                 <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-6 sm:h-8 lg:h-10 w-auto drop-shadow-sm" />
               </div>
               <nav className="flex items-center gap-6">
-                <button onClick={scrollToProducts} className="text-foreground/70 hover:bg-primary-green/10 hover:text-primary-green transition-all duration-300 font-medium text-xs lg:text-sm px-2 py-1 rounded">
+                <button onClick={scrollToProducts} className="text-xs sm:text-sm px-2 sm:px-4 text-foreground/70 hover:bg-primary-green/10 hover:text-primary-green transition-all duration-300 font-medium px-2 py-1 rounded">
                   Products
                 </button>
-                <button onClick={scrollToContact} className="text-foreground/70 hover:bg-primary-green/10 hover:text-primary-green transition-all duration-300 font-medium text-xs lg:text-sm px-2 py-1 rounded">
+                <button onClick={scrollToContact} className="text-xs sm:text-sm px-2 sm:px-4 text-foreground/70 hover:bg-primary-green/10 hover:text-primary-green transition-all duration-300 font-medium px-2 py-1 rounded">
                   Contact Us
                 </button>
               </nav>

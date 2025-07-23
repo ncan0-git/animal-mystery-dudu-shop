@@ -95,15 +95,15 @@ const Product = () => {
   return <div className="min-h-screen bg-background">
       {/* Header with Logo */}
       <header className="w-full relative bg-background shadow-lg border-b border-border/20">
-        <div className="container mx-auto px-6 py-2">
+        <div className="container mx-auto px-4 py-1.5">
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-8 sm:h-10 lg:h-12 w-auto drop-shadow-sm" />
+              <img src="/lovable-uploads/6aacc559-e50e-4077-be46-bbbf240bf7a8.png" alt="DuDu Animal Party Logo" className="h-6 sm:h-8 lg:h-10 w-auto drop-shadow-sm" />
             </div>
-            <nav className="flex items-center gap-8">
+            <nav className="flex items-center gap-6">
               
               
-              <Button variant="ghost" onClick={() => navigate('/')} className="hover:bg-primary-green/10 text-xs sm:text-sm px-2 sm:px-4">
+              <Button variant="ghost" onClick={() => navigate('/')} className="text-xs sm:text-sm px-2 sm:px-4 hover:bg-primary-green/10">
                 <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                 <span className="hidden xs:inline">Back to </span>Home
               </Button>
