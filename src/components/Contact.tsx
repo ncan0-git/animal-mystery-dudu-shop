@@ -29,17 +29,29 @@ export const Contact = () => {
 
   // Called when Altcha widget emits state change event with challenge data
   const handleAltchaStateChange = (ev: CustomEvent) => {
-    console.log("Altcha state changed event:", ev.detail?.payload);
-    if (ev.detail?.payload) {
-      altchaRef.current = ev.detail.payload as AltchaValue;
-      console.log("Updated altchaRef.current:", altchaRef.current);
-    } else {
-      // If event doesn't carry payload, clear altchaRef
-      altchaRef.current = null;
+    if (!ev.detail?.payload) {
       console.warn("Altcha state changed event missing payload; reset altchaRef.current");
+      altchaRef.current = null;
+      return;
+    }
+    try {
+      const payloadEncoded = ev.detail.payload as string;
+  
+      // Decode base64 JSON string
+      const jsonStr = atob(payloadEncoded);
+  
+      // Parse JSON string to object
+      const payloadObj = JSON.parse(jsonStr) as AltchaValue;
+  
+      altchaRef.current = payloadObj;
+  
+      console.log("Updated altchaRef.current:", altchaRef.current);
+    } catch (err) {
+      console.error("Failed to decode/parse Altcha payload:", err);
+      altchaRef.current = null;
     }
   };
-
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
