@@ -83,4 +83,64 @@ const Contact: React.FC = () => {
         variant: 'destructive',
       });
     } finally {
-      setIsLoading
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="max-w-md mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-6">Contact Us</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="name" className="block text-sm font-medium">
+            Name
+          </label>
+          <Input
+            id="name"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium">
+            Email
+          </label>
+          <Input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium">
+            Message
+          </label>
+          <Textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+            className="mt-1"
+          />
+        </div>
+        <div>
+          <altcha-widget
+            challengeurl="https://altcha.org/api/challenge"
+            auto="onload"
+          ></altcha-widget>
+        </div>
+        <Button type="submit" disabled={isLoading} className="w-full">
+          {isLoading ? 'Submitting...' : 'Submit'}
+        </Button>
+      </form>
+    </div>
+  );
+};
+
+export default Contact;
