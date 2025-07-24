@@ -9,14 +9,12 @@ import Altcha from "@/components/ui/altcha";
 
 interface AltchaValue {
   challenge: string;
-  answer: string | number;
+  number: string | number;
   signature: string;
 }
 
 export const Contact = () => {
   const { toast } = useToast();
-
-  // Holds Altcha verification data
   const altchaRef = useRef<AltchaValue | null>(null);
 
   const [formData, setFormData] = useState({
@@ -27,35 +25,30 @@ export const Contact = () => {
 
   const [status, setStatus] = useState<null | "sending" | "success" | "error">(null);
 
-  // Called when Altcha widget emits state change event with challenge data
   const handleAltchaStateChange = (ev: CustomEvent) => {
     if (!ev.detail?.payload) {
-      console.warn("Altcha state changed event missing payload; reset altchaRef.current");
+      console.warn("Altcha state changed event missing payload");
       altchaRef.current = null;
       return;
     }
+
     try {
       const payloadEncoded = ev.detail.payload as string;
-  
-      // Decode base64 JSON string
       const jsonStr = atob(payloadEncoded);
-  
-      // Parse JSON string to object
       const payloadObj = JSON.parse(jsonStr) as AltchaValue;
-  
+
       altchaRef.current = payloadObj;
-  
+
       console.log("Updated altchaRef.current:", altchaRef.current);
     } catch (err) {
       console.error("Failed to decode/parse Altcha payload:", err);
       altchaRef.current = null;
     }
   };
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Verify Altcha was completed
     if (!altchaRef.current) {
       toast({
         title: "Verification Required",
@@ -65,9 +58,9 @@ export const Contact = () => {
       return;
     }
 
-    const { challenge, answer, signature } = altchaRef.current;
+    const { challenge, number, signature } = altchaRef.current;
+    const answer = number;
 
-    // Sanity check Altcha data fields are present and non-empty
     if (!challenge || !answer || !signature) {
       toast({
         title: "Incomplete Verification Data",
@@ -105,12 +98,12 @@ export const Contact = () => {
       if (response.ok) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
+        altchaRef.current = null;
+
         toast({
           title: "Message Sent! 📧",
           description: "Thank you for contacting us. We'll get back to you soon!",
         });
-        // Reset Altcha ref so user must verify again if they want to submit again
-        altchaRef.current = null;
       } else {
         setStatus("error");
         toast({
@@ -146,7 +139,6 @@ export const Contact = () => {
               Get in Touch
             </span>
           </h2>
-
           <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
             Have questions about our DuDu Animal Party mystery boxes? We'd love to hear from you!
           </p>
