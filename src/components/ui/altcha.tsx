@@ -41,7 +41,7 @@ const Altcha = forwardRef<{ value: string | null }, AltchaProps>(({ onStateChang
       style={{
         '--altcha-max-width': '100%',
       }}
-      challengeurl="https://api.altcha.org/challenge"
+      challengeurl="https://duduanimalparty.com/altcha/challenge"
     ></altcha-widget>
   )
 })
